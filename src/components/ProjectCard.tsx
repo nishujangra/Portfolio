@@ -30,7 +30,7 @@ const ProjectCard = ({ title, desc, img, iconLists, link }: ProjectCardProps) =>
             <div className="flex justify-between">
                 <div className="flex flex-wrap gap-2">
                     {iconLists.map((icon, index) => (
-                        <img key={index} src={`/src/assets/${icon}`} alt="icon" className="w-8 h-8" />
+                        <img key={index} src={`/assets/${icon}`} alt="icon" className="w-8 h-8" />
                     ))}
                 </div>
                 <a href={link} target="_blank" rel="noopener noreferrer">

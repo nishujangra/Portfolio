@@ -10,10 +10,10 @@ const Contact = () => {
             </p>
             <div className="mt-4 flex justify-center space-x-6">
                 <a href="https://github.com/nishujangra" className="hover:scale-105 transition duration-300" target="_blank" rel="noopener noreferrer">
-                    <img src="/src/assets/git.svg" alt="GitHub" className="h-8 w-8 inline" />
+                    <img src="/assets/git.svg" alt="GitHub" className="h-8 w-8 inline" />
                 </a>
                 <a href="https://buymeacoffee.com/nishujangra27" className="hover:scale-105 transition duration-300" target="_blank" rel="noopener noreferrer">
-                    <img src="/src/assets/bmc.svg" alt="Buy Me A Coffee" className="h-8 w-8 inline" />
+                    <img src="/assets/bmc.svg" alt="Buy Me A Coffee" className="h-8 w-8 inline" />
                 </a>
             </div>
         </footer>

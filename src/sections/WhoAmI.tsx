@@ -14,7 +14,7 @@ const WhoAmI = () => {
           </div>
           <div className="md:w-1/3 mb-6 md:mb-0 order-first md:order-last">
             <BackgroundGradient>
-              <img src="/src/assets/me.jpg" alt="Profile" className="rounded-full shadow-lg" />
+              <img src="/assets/me.jpg" alt="Profile" className="rounded-full shadow-lg" />
             </BackgroundGradient>
           </div>
         </div>

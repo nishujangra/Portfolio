@@ -15,7 +15,7 @@ const ExperienceCard = ( work : props) => {
             >
                 <div className="flex gap-5 p-4 justify-center items-center">
                     <div className="w-2/3">
-                        <img src={`/src/assets/${work.thumbnail}`} alt="" className="w-36 h-36" />
+                        <img src={`/assets/${work.thumbnail}`} alt="" className="w-36 h-36" />
                     </div>
                     <div className="flex flex-col gap-4">
                         <h3 className="text-xl font-semibold">
