@@ -17,7 +17,7 @@ const Navbar = () => {
                         <span className="text-xl font-semibold text-white">Nishujangra 27</span>
                     </div>
                     <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                        <a href="#" className="text-white hover:text-gray-300 hover:brightness-125">Home</a>
+                        <a href="/" className="text-white hover:text-gray-300 hover:brightness-125">Home</a>
                         <a href="#about" className="text-white hover:text-gray-300 hover:brightness-125">About</a>
                         <a href="#projects" className="text-white hover:text-gray-300 hover:brightness-125">Projects</a>
                         <a href="#contact" className="text-white hover:text-gray-300 hover:brightness-125">Contact</a>
@@ -37,7 +37,7 @@ const Navbar = () => {
                         <SheetHeader>
                             <SheetDescription>
                                 <div className="flex flex-col gap-2 mt-2">
-                                    <a href="#" className="text-white hover:text-gray-300 hover:brightness-125">Home</a>
+                                    <a href="/" className="text-white hover:text-gray-300 hover:brightness-125">Home</a>
                                     <a href="#about" className="text-white hover:text-gray-300 hover:brightness-125">About</a>
                                     <a href="#projects" className="text-white hover:text-gray-300 hover:brightness-125">Projects</a>
                                     <a href="#contact" className="text-white hover:text-gray-300 hover:brightness-125">Contact</a>

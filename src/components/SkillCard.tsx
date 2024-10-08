@@ -19,7 +19,7 @@ const SkillCard = ({ skillName, skillImage, skillDescription }: SkillProps) => {
                 <CardTitle className="text-xl font-bold pb-4">{skillName}</CardTitle>
                 <img src={skillImage} alt={`${skillName} logo`} className="rounded-lg w-16 h-16" />
             </CardHeader>
-            <CardDescription className="text-sm text-zinc-400">{skillDescription}</CardDescription>
+            <CardDescription className="text-sm text-zinc-400 hidden sm:block">{skillDescription}</CardDescription>
         </Card>
     );
 }
