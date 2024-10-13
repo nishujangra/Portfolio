@@ -14,6 +14,11 @@ const Navbar = () => {
             <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden md:block">
                 <div className="flex justify-between h-16 items-center">
                     <div className="flex-shrink-0 flex items-center">
+                        <img
+                            src="/logo.svg"
+                            alt="logo"
+                            className="h-8 w-8 mr-2"
+                        />
                         <span className="text-xl font-semibold text-white">Nishujangra 27</span>
                     </div>
                     <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -28,7 +33,9 @@ const Navbar = () => {
             <div className="md:hidden flex justify-between items-center py-4 px-8">
                 <Sheet>
                     <SheetTitle>
-                        <span className="text-xl mt-2 font-semibold text-white">Nishujangra 27</span>
+                        <span className="text-xl mt-2 font-semibold text-white">
+                            Nishujangra 27
+                        </span>
                     </SheetTitle>
                     <SheetTrigger >
                         <HamburgerMenuIcon className="w-7 h-7 text-zinc-100" />
@@ -36,7 +43,12 @@ const Navbar = () => {
                     <SheetContent>
                         <SheetHeader>
                             <SheetDescription>
-                                <div className="flex flex-col gap-2 mt-2">
+                                <div className="flex flex-col gap-2 mt-2 items-center justify-center">
+                                    <img
+                                        src="/logo.svg"
+                                        alt="logo"
+                                        className="h-8 w-8 mr-2"
+                                    />
                                     <a href="/" className="text-white hover:text-gray-300 hover:brightness-125">Home</a>
                                     <a href="#about" className="text-white hover:text-gray-300 hover:brightness-125">About</a>
                                     <a href="#projects" className="text-white hover:text-gray-300 hover:brightness-125">Projects</a>
