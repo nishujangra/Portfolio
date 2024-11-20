@@ -13,8 +13,13 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
-  			background: 'hsl(var(--background))',
-  			foreground: 'hsl(var(--foreground))',
+			background: '#121212',
+			gold: '#FAB12F',
+			'nav-bg': '#282829',
+			foreground: '#1E1E1F',
+			light: '#C5D3E8',
+  			// background: 'hsl(var(--background))',
+  			// foreground: 'hsl(var(--foreground))',
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'

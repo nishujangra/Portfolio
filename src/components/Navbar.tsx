@@ -1,66 +1,29 @@
-import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-} from "@/components/ui/sheet"
-import { HamburgerMenuIcon } from "@radix-ui/react-icons"
+import { Link, useLocation } from "react-router-dom"
 
-const Navbar = () => {
+const NavBar = () => {
+    const { pathname } = useLocation();
+
     return (
-        <div className="z-50 sticky top-0 bg-gray-900 bg-opacity-50 backdrop-blur-md shadow-lg border-b border-gray-700">
-            <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 hidden md:block">
-                <div className="flex justify-between h-16 items-center">
-                    <div className="flex-shrink-0 flex items-center">
-                        <img
-                            src="/logo.svg"
-                            alt="logo"
-                            className="h-8 w-8 mr-2"
-                        />
-                        <span className="text-xl font-semibold text-white">Nishujangra 27</span>
-                    </div>
-                    <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-                        <a href="/" className="text-white hover:text-gray-300 hover:brightness-125">Home</a>
-                        <a href="#about" className="text-white hover:text-gray-300 hover:brightness-125">About</a>
-                        <a href="#projects" className="text-white hover:text-gray-300 hover:brightness-125">Projects</a>
-                        <a href="#contact" className="text-white hover:text-gray-300 hover:brightness-125">Contact</a>
-                    </div>
-                </div>
-
-            </nav>
-            <div className="md:hidden flex justify-between items-center py-4 px-8">
-                <Sheet>
-                    <SheetTitle>
-                        <span className="text-xl mt-2 font-semibold text-white">
-                            Nishujangra 27
-                        </span>
-                    </SheetTitle>
-                    <SheetTrigger >
-                        <HamburgerMenuIcon className="w-7 h-7 text-zinc-100" />
-                    </SheetTrigger>
-                    <SheetContent>
-                        <SheetHeader>
-                            <SheetDescription>
-                                <div className="flex flex-col gap-2 mt-2 items-center justify-center">
-                                    <img
-                                        src="/logo.svg"
-                                        alt="logo"
-                                        className="h-8 w-8 mr-2"
-                                    />
-                                    <a href="/" className="text-white hover:text-gray-300 hover:brightness-125">Home</a>
-                                    <a href="#about" className="text-white hover:text-gray-300 hover:brightness-125">About</a>
-                                    <a href="#projects" className="text-white hover:text-gray-300 hover:brightness-125">Projects</a>
-                                    <a href="#contact" className="text-white hover:text-gray-300 hover:brightness-125">Contact</a>
-                                </div>
-                            </SheetDescription>
-                        </SheetHeader>
-                    </SheetContent>
-                </Sheet>
-            </div>
+        <div className="bg-nav-bg w-2/3 relative left-1/3 p-6 rounded-bl-xl rounded-tr-xl">
+            <ul className="flex flex-row px-5 justify-between font-semibold text-lg">
+                <li className={`${pathname === '/' && 'text-gold'}`}>
+                    <Link to="/">About Me</Link>
+                </li>
+                <li className={`${pathname == '/resume' && 'text-gold'}`}>
+                    <Link to="/resume">Resume</Link>
+                </li>
+                <li className={`${pathname == '/portfolio' && 'text-gold'}`}>
+                    <Link to="/portfolio">Portfolio</Link>
+                </li>
+                <li className={`${pathname == '/services' && 'text-gold'}`}>
+                    <Link to="/services">Services</Link>
+                </li>
+                <li className={`${pathname == '/contact' && 'text-gold'}`}>
+                    <Link to="/contact">Contact</Link>
+                </li>
+            </ul>
         </div>
     )
 }
 
-export default Navbar
+export default NavBar
