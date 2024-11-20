@@ -10,7 +10,7 @@ const Experience = () => {
                         color="gold"
                     />
                 </div>
-                <h2 className="text-3xl font-bold flex justify-center items-center">Experience</h2>
+                <h2 className="text-xl font-bold flex justify-center items-center">Experience</h2>
             </div>
 
             <div className="flex">
@@ -22,7 +22,7 @@ const Experience = () => {
 
                 <div className="ml-20 flex flex-col gap-9">
                     <div className="">
-                        <h3 className="text-xl font-semibold">IEEE YMCA SB</h3>
+                        <h3 className="text-lg font-semibold">IEEE YMCA SB</h3>
                         <p className="italic">Backend Developer</p>
                         <p className="text-gray-500">Oct 2023</p>
                         <p className="text-gray-500 mt-2">
@@ -31,7 +31,7 @@ const Experience = () => {
                     </div>
 
                     <div className="">
-                        <h3 className="text-xl font-semibold">For Client</h3>
+                        <h3 className="text-lg font-semibold">For Client</h3>
                         <p className="italic">Web Developer</p>
                         <p className="text-gray-500">Nov 2022 - Feb 2023</p>
                         <p className="text-gray-500 mt-2">

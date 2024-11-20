@@ -13,7 +13,7 @@ const Skills = () => {
                             color="gold"
                         />
                     </div>
-                    <h2 className="text-3xl font-bold flex justify-center items-center">Skills</h2>
+                    <h2 className="text-xl font-bold flex justify-center items-center">Skills</h2>
                 </div>
                 <p className="text-gray-400">
                     Here are the technologies and tools I work with:
@@ -25,7 +25,7 @@ const Skills = () => {
                     <div key={index} className="flex items-center space-x-3 bg-background rounded-lg p-5 shadow-lg">
                         <img src={item.image} alt={item.name} className="w-10 h-10" />
                         <div className="text-light">
-                            <h3 className="text-lg font-bold">{item.name}</h3>
+                            <h3 className="text-md font-bold">{item.name}</h3>
                         </div>
                     </div>
                 ))}

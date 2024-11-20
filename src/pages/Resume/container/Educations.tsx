@@ -10,7 +10,7 @@ const Educations = () => {
                         color="gold"
                     />
                 </div>
-                <h2 className="text-3xl font-bold flex justify-center items-center">Education</h2>
+                <h2 className="text-xl font-bold flex justify-center items-center">Education</h2>
             </div>
 
             <div className="flex">
@@ -22,7 +22,7 @@ const Educations = () => {
 
                 <div className="ml-20 flex flex-col gap-7">
                     <div className="">
-                        <h3 className="text-xl font-semibold">J.C. Bose University of Science and Technology, YMCA</h3>
+                        <h3 className="text-lg font-semibold">J.C. Bose University of Science and Technology, YMCA</h3>
                         <p className="italic">Bachelor of Technology in Electronics and Communication Engineering</p>
                         <p className="text-gray-500">Nov 2021 - June 2025</p>
                         <p className="text-gray-500 mt-2">
@@ -32,7 +32,7 @@ const Educations = () => {
                     </div>
 
                     <div>
-                        <h3 className="text-xl font-semibold">R.E.D. Sr. Secondary School, CHK, Jhajjar</h3>
+                        <h3 className="text-lg font-semibold">R.E.D. Sr. Secondary School, CHK, Jhajjar</h3>
                         <p className="italic">High School</p>
                         <p className="text-gray-500 mt-2">
                             Emphasized foundational subjects in mathematics and science, with a focus on analytical thinking
