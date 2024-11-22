@@ -6,9 +6,9 @@ const Services = () => {
         <div className="bg-foreground w-full h-full rounded-lg">
             <NavBar />
 
-            <h2 className="text-3xl pl-10 font-extrabold">Services</h2>
+            <h2 className="text-2xl pl-10 font-extrabold">Services</h2>
 
-            <hr className="bg-gold h-2 w-1/3 rounded-lg ml-6 mt-4" />
+            <hr className="bg-gold h-2 w-1/4 rounded-lg ml-6 mt-4" />
 
             <div className="text-center text-gold py-7 mb-8 rounded-lg px-10">
                 🎉 <strong>Special Offer:</strong> Get <span className="font-bold">FREE services for 3 weeks</span> if you're among the first 5 clients!
@@ -27,14 +27,14 @@ const Services = () => {
                             key={index}
                             className="bg-background rounded-lg p-6 shadow-lg hover:scale-105 transition-transform duration-300 grid grid-cols-3"
                         >
-                            <div className="text-4xl mb-4 flex items-center col-span-1">
+                            <div className="text-4xl mb-4 flex items-center justify-center col-span-1">
                                 {service.icon}
                             </div>
                             <div className="col-span-2 flex flex-col gap-4 justify-center items-center">
                                 <h3 className="text-xl font-bold">
                                     {service.title}
                                 </h3>
-                                <p className="text-gray-400">{service.description}</p>
+                                <p className="text-gray-400 text-xs">{service.description}</p>
                             </div>
                         </div>
                     ))}

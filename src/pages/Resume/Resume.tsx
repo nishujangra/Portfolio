@@ -8,9 +8,9 @@ const Resume = () => {
     <div className="bg-foreground w-full h-full rounded-lg">
       <NavBar />
 
-      <h2 className="text-3xl pl-10 font-extrabold">Resume</h2>
+      <h2 className="text-2xl pl-10 font-extrabold">Resume</h2>
 
-      <hr className="bg-gold h-2 w-1/3 rounded-lg ml-6 mt-4" />
+      <hr className="bg-gold h-2 w-1/4 rounded-lg ml-6 mt-4" />
 
       <div className="py-7 px-10 flex flex-col gap-16">
         <Educations />

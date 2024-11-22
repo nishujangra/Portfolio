@@ -1,14 +1,14 @@
 import NavBar from "@/components/Navbar"
-import { Mail } from "lucide-react"
+import { Mail, MapPin, Smartphone } from "lucide-react"
 
 const Contact = () => {
     return (
         <div className="bg-foreground w-full h-full rounded-lg">
             <NavBar />
 
-            <h2 className="text-3xl pl-10 font-extrabold">Contact</h2>
+            <h2 className="text-2xl pl-10 font-extrabold">Contact</h2>
 
-            <hr className="bg-gold h-2 w-1/3 rounded-lg ml-6 mt-4" />
+            <hr className="bg-gold h-2 w-1/4 rounded-lg ml-6 mt-4" />
 
 
             <div className="grid grid-cols-1 gap-8 py-7 px-10">
@@ -33,7 +33,7 @@ const Contact = () => {
                     <p className="text-gray-400 mb-4 flex gap-2">
                         <Mail
                             color="gold"
-                            size={24}
+                            size={20}
                         /> Email:{" "}
                         <a
                             href="mailto:ndjangra1027@example.com"
@@ -42,8 +42,12 @@ const Contact = () => {
                             ndjangra1027@example.com
                         </a>
                     </p>
-                    <p className="text-gray-400 mb-4">
-                        📱 Phone:{" "}
+                    <p className="text-gray-400 mb-4 flex gap-2">
+                        <Smartphone
+                            color="gold"
+                            size={20}
+                        />
+                        Phone:{" "}
                         <a
                             href="tel:+919896774495"
                             className="underline"
@@ -51,8 +55,12 @@ const Contact = () => {
                             +91 9896774495
                         </a>
                     </p>
-                    <p className="text-gray-400">
-                        📍 Location: Faridabad, Haryana, India
+                    <p className="text-gray-400 flex gap-2">
+                        <MapPin
+                            color="gold"
+                            size={20}
+                        />
+                        Location: Faridabad, Haryana, India
                     </p>
 
                     {/* Special Offer */}

@@ -6,7 +6,7 @@ const Experience = () => {
             <div className="flex gap-5 justify-start items-center">
                 <div className="border-gold border-[1px] p-3 rounded-xl">
                     <BookOpen
-                        size={24}
+                        size={16}
                         color="gold"
                     />
                 </div>

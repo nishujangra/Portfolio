@@ -5,7 +5,7 @@ const NavBar = () => {
 
     return (
         <div className="bg-nav-bg w-2/3 relative left-1/3 p-6 rounded-bl-xl rounded-tr-xl">
-            <ul className="flex flex-row px-5 justify-between font-semibold text-lg">
+            <ul className="flex flex-row px-5 justify-between font-semibold text-md">
                 <li className={`${pathname === '/' && 'text-gold'}`}>
                     <Link to="/">About Me</Link>
                 </li>

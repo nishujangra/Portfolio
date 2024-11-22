@@ -9,7 +9,7 @@ const Skills = () => {
                 <div className="flex gap-5 justify-start items-center">
                     <div className="border-gold border-[1px] p-3 rounded-xl">
                         <Lightbulb
-                            size={24}
+                            size={16}
                             color="gold"
                         />
                     </div>
@@ -20,11 +20,11 @@ const Skills = () => {
                 </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
                 {skill.map((item, index) => (
                     <div key={index} className="flex items-center space-x-3 bg-background rounded-lg p-5 shadow-lg">
                         <img src={item.image} alt={item.name} className="w-10 h-10" />
-                        <div className="text-light">
+                        <div className="text-light flex justify-center items-center">
                             <h3 className="text-md font-bold">{item.name}</h3>
                         </div>
                     </div>

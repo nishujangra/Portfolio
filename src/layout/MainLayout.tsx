@@ -3,11 +3,11 @@ import { Outlet } from "react-router-dom"
 
 const MainLayout = () => {
   return (
-    <div className="bg-background text-white min-h-[100vh] flex md:flex-row pt-20">
-      <div className="bg-foreground rounded-xl h-full w-[27vw] mx-16">
+    <div className="bg-background text-white min-h-[100vh] grid grid-cols-10 py-20">
+      <div className="bg-foreground rounded-xl h-max mx-12 col-span-3">
         <SideBar />
       </div>
-      <div className="text-white mr-16 w-[73vw] pb-10">
+      <div className="mr-12 col-span-7">
         <Outlet />
       </div>
     </div>
