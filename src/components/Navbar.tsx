@@ -4,7 +4,7 @@ const NavBar = () => {
     const { pathname } = useLocation();
 
     return (
-        <div className="bg-nav-bg w-4/5 relative left-[20%] border-light border-b-[1px] border-l-[1px] p-6 rounded-bl-xl rounded-tr-xl">
+        <div className="bg-nav-bg w-4/5 relative left-[20%] p-6 rounded-bl-xl rounded-tr-xl">
             <ul className="flex flex-row px-2 justify-evenly font-semibold text-sm">
                 <li className={`${pathname === '/' && 'text-gold border-b-2 border-b-gold'} px-1`}>
                     <Link to="/">About Me</Link>

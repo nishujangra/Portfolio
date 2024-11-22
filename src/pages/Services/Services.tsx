@@ -31,7 +31,7 @@ const Services = () => {
                                 {service.icon}
                             </div>
                             <div className="col-span-2 flex flex-col gap-4 justify-center items-center">
-                                <h3 className="text-xl font-bold">
+                                <h3 className="text-lg font-bold">
                                     {service.title}
                                 </h3>
                                 <p className="text-gray-400 text-xs">{service.description}</p>

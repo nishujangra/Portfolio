@@ -5,7 +5,7 @@ const SideBar = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-10 py-10 rounded-xl">
       <div className="flex flex-col justify-center items-center gap-5">
-        <div className="bg-background border-[1px] border-gold rounded-xl flex flex-col justify-center items-center">
+        <div className="bg-background p-4 border-[1px] border-gold rounded-xl flex flex-col justify-center items-center">
           <img
             src="/nishujangra27.jpg"
             alt="Nishant"
