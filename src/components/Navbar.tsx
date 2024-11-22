@@ -4,21 +4,21 @@ const NavBar = () => {
     const { pathname } = useLocation();
 
     return (
-        <div className="bg-nav-bg w-2/3 relative left-1/3 p-6 rounded-bl-xl rounded-tr-xl">
-            <ul className="flex flex-row px-5 justify-between font-semibold text-md">
-                <li className={`${pathname === '/' && 'text-gold'}`}>
+        <div className="bg-nav-bg w-4/5 relative left-[20%] border-light border-b-[1px] border-l-[1px] p-6 rounded-bl-xl rounded-tr-xl">
+            <ul className="flex flex-row px-2 justify-evenly font-semibold text-sm">
+                <li className={`${pathname === '/' && 'text-gold border-b-2 border-b-gold'} px-1`}>
                     <Link to="/">About Me</Link>
                 </li>
-                <li className={`${pathname == '/resume' && 'text-gold'}`}>
+                <li className={`${pathname == '/resume' && 'text-gold border-b-2 border-b-gold'} px-1`}>
                     <Link to="/resume">Resume</Link>
                 </li>
-                <li className={`${pathname == '/portfolio' && 'text-gold'}`}>
+                <li className={`${pathname == '/portfolio' && 'text-gold border-b-2 border-b-gold'} px-1`}>
                     <Link to="/portfolio">Portfolio</Link>
                 </li>
-                <li className={`${pathname == '/services' && 'text-gold'}`}>
+                <li className={`${pathname == '/services' && 'text-gold border-b-2 border-b-gold'} px-1`}>
                     <Link to="/services">Services</Link>
                 </li>
-                <li className={`${pathname == '/contact' && 'text-gold'}`}>
+                <li className={`${pathname == '/contact' && 'text-gold border-b-2 border-b-gold'} px-1`}>
                     <Link to="/contact">Contact</Link>
                 </li>
             </ul>

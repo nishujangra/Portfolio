@@ -5,7 +5,7 @@ const SideBar = () => {
   return (
     <div className="flex flex-col justify-center items-center gap-10 py-10 rounded-xl">
       <div className="flex flex-col justify-center items-center gap-5">
-        <div className="bg-background p-6 border-[1px] border-gold rounded-xl flex flex-col justify-center items-center">
+        <div className="bg-background border-[1px] border-gold rounded-xl flex flex-col justify-center items-center">
           <img
             src="/nishujangra27.jpg"
             alt="Nishant"
@@ -16,23 +16,23 @@ const SideBar = () => {
         </div>
 
         <div className="flex flex-col gap-3 justify-center items-center">
-          <h1 className="text-xl font-bold">Nishant </h1>
-          <h1 className="bg-background px-4 py-2 rounded-xl text-lg text-light">Web Developer</h1>
+          <h1 className="text-lg font-bold">Nishant </h1>
+          <h1 className="bg-background px-4 py-2 rounded-xl text-md text-light">Web Developer</h1>
         </div>
       </div>
 
       {/* Contact */}
-      <div className="flex flex-col gap-8 border-y-[1px] py-5 border-light max-w-[80%] overflow-hidden">
+      <div className="flex flex-col gap-8 border-y-[1px] py-5 border-light max-w-[80%] text-sm overflow-hidden">
         {/* Email */}
         <div className="flex flex-row gap-9 items-center">
           <div className="bg-background p-4 rounded-xl">
             <Mail
               color="gold"
-              size={24}
+              size={16}
             />
           </div>
           <div>
-            <a href="mailto:ndjangra1027@gmail.com">ndjangra1027@.....</a>
+            <a href="mailto:ndjangra1027@gmail.com">ndjangra1027@gmail.com</a>
           </div>
         </div>
 
@@ -42,7 +42,7 @@ const SideBar = () => {
           <div className="bg-background p-4 rounded-xl">
             <Smartphone
               color="gold"
-              size={24}
+              size={16}
             />
           </div>
           <div>
@@ -56,7 +56,7 @@ const SideBar = () => {
           <div className="bg-background p-4 rounded-xl">
             <MapPin
               color="gold"
-              size={24}
+              size={16}
             />
           </div>
           <div>
@@ -75,7 +75,7 @@ const SideBar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/assets/git.svg" alt="GitHub" color="gold" className="h-7 w-7 inline" />
+          <img src="/assets/git.svg" alt="GitHub" color="gold" className="h-5 w-5 inline" />
         </a>
         <a
           href="https://buymeacoffee.com/nishujangra27"
@@ -83,7 +83,7 @@ const SideBar = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/assets/bmc.svg" alt="Buy Me A Coffee" className="h-7 w-7 inline" />
+          <img src="/assets/bmc.svg" alt="Buy Me A Coffee" className="h-5 w-5 inline" />
         </a>
         <a
           href="https://www.linkedin.com/in/nishujangra27/"
@@ -92,7 +92,7 @@ const SideBar = () => {
           rel="noopener noreferrer"
         >
           <Linkedin
-            size={24}
+            size={20}
             color="white"
           />
         </a>

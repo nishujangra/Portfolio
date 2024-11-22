@@ -22,19 +22,19 @@ const Educations = () => {
 
                 <div className="ml-20 flex flex-col gap-7">
                     <div className="">
-                        <h3 className="text-lg font-semibold">J.C. Bose University of Science and Technology, YMCA</h3>
-                        <p className="italic">Bachelor of Technology in Electronics and Communication Engineering</p>
-                        <p className="text-gray-500">Nov 2021 - June 2025</p>
-                        <p className="text-gray-500 mt-2">
+                        <h3 className="text-md font-semibold">J.C. Bose University of Science and Technology, YMCA</h3>
+                        <p className="italic text-md">Bachelor of Technology in Electronics and Communication Engineering</p>
+                        <p className="text-gray-500 text-sm">Nov 2021 - June 2025</p>
+                        <p className="text-gray-500 mt-2 text-sm">
                             Focused on technical skills in web development, DSA, and programming, while exploring core
                             electronics and communication subjects.
                         </p>
                     </div>
 
                     <div>
-                        <h3 className="text-lg font-semibold">R.E.D. Sr. Secondary School, CHK, Jhajjar</h3>
-                        <p className="italic">High School</p>
-                        <p className="text-gray-500 mt-2">
+                        <h3 className="text-md font-semibold">R.E.D. Sr. Secondary School, CHK, Jhajjar</h3>
+                        <p className="italic text-md">High School</p>
+                        <p className="text-gray-500 mt-2 text-sm">
                             Emphasized foundational subjects in mathematics and science, with a focus on analytical thinking
                             and problem-solving.
                         </p>
