@@ -1,6 +1,5 @@
-import NavBar from "./../../components/NavBar"
 import { CodeXml, MonitorCog, PersonStanding, Settings } from "lucide-react"
-
+import NavBar from "../../components/Navbar"
 
 const Home = () => {
   return (

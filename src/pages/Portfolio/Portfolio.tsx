@@ -1,4 +1,4 @@
-import NavBar from "./../../components/NavBar"
+import NavBar from "../../components/Navbar"
 import projects from "@/data/projects"
 import { FolderCode } from "lucide-react"
 

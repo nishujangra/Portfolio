@@ -1,4 +1,4 @@
-import NavBar from "./../../components/NavBar"
+import NavBar from "../../components/Navbar"
 import { services } from "@/data/services"
 
 const Services = () => {
