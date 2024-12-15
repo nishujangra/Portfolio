@@ -1,4 +1,4 @@
-import NavBar from "@/components/NavBar"
+import NavBar from "./../../components/NavBar"
 import { CodeXml, MonitorCog, PersonStanding, Settings } from "lucide-react"
 
 
