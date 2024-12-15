@@ -1,7 +1,7 @@
 import Educations from "./container/Educations"
 import Experience from "./container/Experience"
 import Skills from "./container/Skills"
-import NavBar from "@/components/Navbar"
+import NavBar from '@/components/NavBar';
 
 const Resume = () => {
   return (

@@ -1,6 +1,7 @@
 import NavBar from "@/components/NavBar"
 import { CodeXml, MonitorCog, PersonStanding, Settings } from "lucide-react"
 
+
 const Home = () => {
   return (
     <div className="bg-foreground w-full h-full rounded-xl py-8 md:p-0">

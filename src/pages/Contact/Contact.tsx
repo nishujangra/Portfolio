@@ -1,5 +1,5 @@
-import NavBar from "@/components/Navbar"
 import { Mail, MapPin, Smartphone } from "lucide-react"
+import NavBar from '@/components/NavBar';
 
 const Contact = () => {
     return (
