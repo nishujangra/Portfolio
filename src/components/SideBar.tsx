@@ -3,7 +3,7 @@ import { Linkedin, Mail, MapPin, Smartphone } from "lucide-react"
 
 const SideBar = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-10 py-10 rounded-xl">
+    <div className="flex flex-col justify-center items-center gap-10 py-10 rounded-xl fixed bg-foreground">
       <div className="flex flex-col justify-center items-center gap-5">
         <div className="bg-background p-4 border-[1px] border-gold rounded-xl flex flex-col justify-center items-center">
           <img
@@ -24,8 +24,8 @@ const SideBar = () => {
       {/* Contact */}
       <div className="flex flex-col gap-8 border-y-[1px] py-5 border-light max-w-[80%] text-sm overflow-hidden">
         {/* Email */}
-        <div className="flex flex-row gap-9 items-center">
-          <div className="bg-background p-4 rounded-xl">
+        <div className="flex flex-row gap-6 items-center">
+          <div className="bg-background p-3 rounded-xl">
             <Mail
               color="gold"
               size={16}
@@ -38,8 +38,8 @@ const SideBar = () => {
 
 
         {/* Phone Number */}
-        <div className="flex flex-row gap-9 items-center">
-          <div className="bg-background p-4 rounded-xl">
+        <div className="flex flex-row gap-6 items-center">
+          <div className="bg-background p-3 rounded-xl">
             <Smartphone
               color="gold"
               size={16}
@@ -52,8 +52,8 @@ const SideBar = () => {
 
 
         {/* Location */}
-        <div className="flex flex-row gap-9 items-center">
-          <div className="bg-background p-4 rounded-xl">
+        <div className="flex flex-row gap-6 items-center">
+          <div className="bg-background p-3 rounded-xl">
             <MapPin
               color="gold"
               size={16}

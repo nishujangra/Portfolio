@@ -1,10 +1,10 @@
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom";
 
-const NavBar = () => {
+const BottomNavBar = () => {
     const { pathname } = useLocation();
 
     return (
-        <div className="bg-nav-bg w-4/5 relative left-[20%] p-6 rounded-bl-xl rounded-tr-xl hidden md:flex">
+        <div className="w-[80%] bg-black bg-opacity-30 backdrop-filter backdrop-blur-md p-4 pt-5 rounded-tl-full rounded-tr-full flex justify-center items-center">
             <ul className="flex w-full flex-row px-2 justify-evenly font-semibold text-sm">
                 <li className={`${pathname === '/' && 'text-gold border-b-2 border-b-gold'} px-1`}>
                     <Link to="/">About Me</Link>
@@ -26,4 +26,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
+export default BottomNavBar

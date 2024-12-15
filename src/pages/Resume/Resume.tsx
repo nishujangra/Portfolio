@@ -5,7 +5,7 @@ import NavBar from "@/components/Navbar"
 
 const Resume = () => {
   return (
-    <div className="bg-foreground w-full h-full rounded-lg">
+    <div className="bg-foreground w-full h-full rounded-lg py-8 md:p-0">
       <NavBar />
 
       <h2 className="text-2xl pl-10 font-extrabold">Resume</h2>

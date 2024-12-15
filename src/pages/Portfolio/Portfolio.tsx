@@ -1,9 +1,10 @@
 import NavBar from "@/components/Navbar"
 import projects from "@/data/projects"
+import { FolderCode } from "lucide-react"
 
 const Portfolio = () => {
     return (
-        <div className="bg-foreground w-full h-full rounded-lg">
+        <div className="bg-foreground w-full h-full rounded-lg py-8 md:p-0">
             <NavBar />
 
             <h2 className="text-2xl pl-10 font-extrabold">Portfolio</h2>
@@ -16,12 +17,16 @@ const Portfolio = () => {
                         key={index}
                         className="bg-background rounded-lg p-5 shadow-lg hover:scale-105 transition-transform duration-300 flex flex-col gap-8 justify-between"
                     >
-                        <div>
-                            <img
-                                src={project.img}
-                                alt={project.title}
-                                className="w-full h-40 object-contain rounded-lg"
-                            />
+                        <div className="flex justify-center items-center w-full h-full">
+                            {project.img ? (
+                                <img
+                                    src={project.img}
+                                    alt={project.title}
+                                    className="w-full h-40 object-contain rounded-lg"
+                                />
+                            ): (
+                                <FolderCode size={64} className="text-gold mx-auto" />
+                            )}
                         </div>
                         <div className="leading-1 flex flex-col justify-between w-full">
                             <h3 className="text-lg text-light text-center font-bold mb-2">

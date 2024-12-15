@@ -1,16 +1,15 @@
-
-import NavBar from "@/components/Navbar"
+import NavBar from "@/components/NavBar"
 import { CodeXml, MonitorCog, PersonStanding, Settings } from "lucide-react"
 
 const Home = () => {
   return (
-    <div className="bg-foreground w-full h-full rounded-xl">
+    <div className="bg-foreground w-full h-full rounded-xl py-8 md:p-0">
       <NavBar />
       <h2 className="text-2xl pl-10 font-extrabold">About Me</h2>
 
       <hr className="bg-gold h-2 w-1/4 rounded-lg ml-6 mt-4" />
 
-      <div className="px-10 py-6 flex flex-col gap-10">
+      <div className="px-10 py-6 flex flex-col gap-10 text-sm">
         <div className="flex flex-col gap-6">
           <p>
             Hi, I&apos;m a passionate Full Stack Developer with a proven ability to transform ideas into dynamic, user-friendly web applications. With a specialization in the MERN stack, I excel at crafting both sleek frontends and powerful backends that deliver seamless user experiences. My technical expertise spans JavaScript, TypeScript, React, and Next.js, enabling me to create responsive, scalable, and efficient solutions tailored to meet diverse needs.

@@ -1,4 +1,3 @@
-
 const projects = [
     {
         title: 'Sharp Edit APIs',
@@ -7,6 +6,14 @@ const projects = [
         iconLists: ['/nodejs.svg', '/express.svg', '/mongodb.svg', '/sharp.png'],
         demoLink: '',
         githubLink: 'https://github.com/nishujangra/sharp-edit',
+    },
+    {
+        title: 'Employee Time Sheet Management System',
+        desc: 'The Employee Timesheet Management System is a full-stack web application for managing employee timesheets. It includes role-based access control for three types of users: Admin, Manager, Employees',
+        img: '',
+        iconsList: ['/vite.svg', '/react.svg', '/nodejs.svg', '/mongodb.svg', '/tailwind.svg', '/ts.svg', '/javascript.svg'],
+        demoLink: '',
+        githubLink: 'https://github.com/nishujangra/rbac-frontend',
     },
     {
         title: "HunterXPokemon - Tresure Hunt Game",
