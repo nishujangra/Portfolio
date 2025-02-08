@@ -1,4 +1,13 @@
+
 const projects = [
+    {
+        title: 'Weather Go Library',
+        desc: 'Weather Go is a Go library that provides real-time weather data for any location. It leverages the OpenWeatherMap API to fetch weather information and provides a simple interface for developers to integrate weather data into their applications.',
+        img: '/assets/go.svg',
+        iconLists: ['/go.svg', '/openweathermap.svg', '/json.svg'],
+        demoLink: '',
+        githubLink: 'https://github.com/nishujangra/weather-library',
+    },
     {
         title: 'Sharp Edit APIs',
         desc: 'Sharp Edit is API application that allows users to upload images and apply various image manipulations in real time. The application leverages the powerful Sharp library for backend image processing.',

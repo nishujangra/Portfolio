@@ -3,7 +3,7 @@ import { Linkedin, Mail, MapPin, Smartphone } from "lucide-react"
 
 const SideBar = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-10 py-10 rounded-xl fixed bg-foreground">
+    <div className="flex flex-col justify-center items-center gap-10 py-10 rounded-xl bg-foreground">
       <div className="flex flex-col justify-center items-center gap-5">
         <div className="bg-background p-4 border-[1px] border-gold rounded-xl flex flex-col justify-center items-center">
           <img

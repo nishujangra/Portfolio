@@ -17,6 +17,11 @@ const skill = [
         description: 'React is an open-source, front end, JavaScript library for building user interfaces or UI components.',
     },
     {
+        name: 'Go',
+        image: '/assets/go.svg',
+        description: 'Go is a statically typed, compiled programming language designed at Google. Go is syntactically similar to C, but with memory safety, garbage collection, structural typing, and CSP-style concurrency'
+    },
+    {
         name: 'Next.js',
         image: '/assets/next.svg',
         description: 'Next.js is an open-source React front-end development web framework that enables functionality such as server-side rendering and generating static websites for React based web applications.',
