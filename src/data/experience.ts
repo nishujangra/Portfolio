@@ -14,6 +14,13 @@ const workExperience = [
         className: "md:col-span-2", // change to md:col-span-2
         thumbnail: "/exp2.svg",
     },
+    {
+        id: 3,
+        title: "Software Developer Trainee",
+        desc: "Built a Go SDK to interact with AllSportsDB API, allowing users to query sports event data dynamically using query parameters. Implemented Bearer Token Authentication and .env-based API key management.Developed a Go-based integration for Ticketmaster API, enabling seamless event search and ticket booking.",
+        className: "md:col-span-2",
+        thumbnail: "/exp3.svg",
+    }
 ]
 
 export default workExperience;

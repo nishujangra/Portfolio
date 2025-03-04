@@ -1,3 +1,4 @@
+import workExperience from "@/data/experience";
 import { BookOpen } from "lucide-react"
 
 const Experience = () => {
@@ -17,27 +18,26 @@ const Experience = () => {
                 <div className="relative left-5">
                     <div className="absolute left-2 transform -translate-x-1/2 h-full w-[1px] bg-gold"></div>
                     <div className="h-4 w-4 rounded-full bg-gold"></div>
+
+                    <div className="h-4 w-4 rounded-full bg-gold mt-44"></div>
                     <div className="h-4 w-4 rounded-full bg-gold mt-48"></div>
                 </div>
 
                 <div className="ml-20 flex flex-col gap-9">
-                    <div className="">
-                        <h3 className="text-md font-semibold">IEEE YMCA SB</h3>
-                        <p className="italic text-md">Backend Developer</p>
-                        <p className="text-gray-500 text-sm">Oct 2023</p>
-                        <p className="text-gray-500 mt-2 text-sm">
-                            Designed and Developed Web Server for IEEE YMCA SB, I created the 'HunterXPokemon' web server using Node.js and MongoDB, with managing server hosting for 750+ registrations and enhancing the user experience.
-                        </p>
-                    </div>
-
-                    <div className="">
-                        <h3 className="text-lg font-semibold">For Client</h3>
-                        <p className="italic text-md">Web Developer</p>
-                        <p className="text-gray-500 text-sm">Nov 2022 - Feb 2023</p>
-                        <p className="text-gray-500 mt-2 text-sm">
-                            Developed a professional resume website for Dr. Rohit Tripathi using HTML, CSS and JavaScript. Ensured a responsive design, cross-browser compatibility, and optimized performance. Collaborated with him for feedback.
-                        </p>
-                    </div>
+                    {workExperience.map((exp) => (
+                        <div key={exp.id} className="flex gap-1 flex-col">
+                            <h3 className="text-md font-semibold">
+                                {exp.title}
+                            </h3>
+                            <p className="italic text-md">
+                                Udyansh
+                            </p>
+                            <p className="text-gray-500 text-sm">Jan 2025 - Present</p>
+                            <p className="text-gray-500 mt-2 text-sm">
+                                {exp.desc}    
+                            </p>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
