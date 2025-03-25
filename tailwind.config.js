@@ -13,9 +13,13 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
   		colors: {
-			background: '#121212',
+			primary: "#4ADE80",
+			secondary: "#1F2937",
+			background: '#111827',
+			text: '#F9FAFB',
+
 			gold: '#FAB12F',
-			'nav-bg': '#282829',
+			// 'nav-bg': '#282829',
 			foreground: '#1E1E1F',
 			light: '#C5D3E8',
   			// background: 'hsl(var(--background))',
