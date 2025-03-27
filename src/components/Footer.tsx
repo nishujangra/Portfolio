@@ -5,7 +5,8 @@ const Footer = () => {
         <footer className="text-xs md:text-lg text-center text-white py-6 transition duration-300 hover:bg-gray-700">
             <p className="mb-2">©2025 Nishujangra27</p>
             <p className="text-sm">
-                Built with <span className="font-bold">Golang</span> &{" "}
+                Built with {" "}
+                {/* <span className="font-bold">Golang</span> &{" "} */}
                 <span className="font-bold">React</span>
             </p>
             <div className="flex justify-center space-x-4 mt-4">

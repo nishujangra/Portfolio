@@ -47,14 +47,14 @@ const NavBar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <a
-                        href="/projects"
+                    <Link
+                        to="/projects"
                         className={`hover:text-gray-400 ${
                             pathname === "/projects" ? "text-gray-400" : ""
                         }`}
                     >
                         &lt;Projects/&gt;
-                    </a>
+                    </Link>
                 </motion.li>
                 <motion.li
                     className="text-md"
@@ -62,14 +62,14 @@ const NavBar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.75 }}
                 >
-                    <a
-                        href="/blogs"
+                    <Link
+                        to="/blogs"
                         className={`hover:text-gray-400 ${
                             pathname === "/blogs" ? "text-gold" : ""
                         }`}
                     >
                         &lt;Blogs/&gt;
-                    </a>
+                    </Link>
                 </motion.li>
                 {/* <motion.li
                     className="text-md"
@@ -115,12 +115,12 @@ const NavBar = () => {
                                 <div className="flex flex-col justify-between h-[80vh]">
                                     <ul className="flex flex-col h-full text-text items-center justify-center space-y-4">
                                         <li className="text-sm">
-                                            <Link
-                                                to="/"
+                                            <a
+                                                href="/"
                                                 className={`hover:text-gray-400`}
                                             >
                                                 &lt;Home/&gt;
-                                            </Link>
+                                            </a>
                                         </li>
                                         <li className="text-sm">
                                             <a
@@ -147,16 +147,16 @@ const NavBar = () => {
                                             </Link>
                                         </li> */}
                                         <li className="text-sm">
-                                            <Link
-                                                to="/contact"
+                                            <a
+                                                href="/contact"
                                                 className={`hover:text-gray-400`}
                                             >
                                                 &lt;Contact/&gt;
-                                            </Link>
+                                            </a>
                                         </li>
                                     </ul>
                                     <div>
-                                        © 2025 Nishujangra27 | Built with Golang & React
+                                        © 2025 Nishujangra27 | Built with React
                                     </div>
                                 </div>
                             </SheetDescription>
