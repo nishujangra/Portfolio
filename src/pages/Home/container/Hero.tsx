@@ -31,7 +31,7 @@ const Hero = () => {
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
                     <img
-                        src="/nishujangra27.jpg"
+                        src="/nishu.png"
                         alt="Profile"
                         className="rounded-full border-4 border-white shadow-lg"
                     />
