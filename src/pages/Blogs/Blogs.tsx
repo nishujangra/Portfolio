@@ -1,3 +1,4 @@
+import { blogs } from "@/data/blogs";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
@@ -6,37 +7,25 @@ const Blogs = () => {
             <div className="flex flex-col justify-center items-center min-h-[80vh]">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 rounded-lg shadow-lg p-8">
                     <h1 className="text-4xl font-bold text-center mb-8">
-                        Link to My Devuan Wiki Blogs
+                        Blog Links
                     </h1>
                     <div className="mt-8">
                         <ul className="list-disc list-inside text-gray-400">
-                            <li className="mb-4">
-                                <Link
-                                    className="hover:underline"
-                                    to="https://bitbucket.org/tirveni/devuan/wiki/Redis-Cluster"
-                                >
-                                    Redis Cluster: What It Is and How to Set It
-                                    Up on Devuan
-                                </Link>
-                            </li>
-                            <li className="mb-4">
-                                <Link
-                                    className="hover:underline"
-                                    to="https://bitbucket.org/tirveni/devuan/wiki/Redis"
-                                >
-                                    How to Install Redis on Devuan Linux
-                                    (Daedalus 5.0)
-                                </Link>
-                            </li>
-                            <li className="mb-4">
-                                <Link
-                                    className="hover:underline"
-                                    to="https://bitbucket.org/tirveni/devuan/wiki/Sudoers"
-                                >
-                                    How to Add a User to the Sudoers in Devuan
-                                    Linux (Daedalus 5.0)
-                                </Link>
-                            </li>
+                            {blogs.map((blog, index) => (
+                                <li key={index} className="mb-4">
+                                    <Link
+                                        to={blog.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blue-500 hover:underline"
+                                    >
+                                        {blog.title}
+                                    </Link>
+                                    <p className="text-gray-300">
+                                        {blog.description}
+                                    </p>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
