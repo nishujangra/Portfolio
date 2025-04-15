@@ -14,7 +14,7 @@ const NavBar = () => {
     const { pathname } = useLocation();
 
     return (
-        <nav className="flex justify-between items-center p-3 bg-opacity-70 backdrop-blur-md sticky top-0 z-50">
+        <nav className="flex justify-between items-center px-8 py-4 bg-opacity-70 backdrop-blur-md sticky top-0 z-50">
             <motion.h1
                 className="text-xl font-bold border-blue-500 border-b px-3"
                 initial={{ opacity: 0, x: -50 }}
@@ -34,7 +34,7 @@ const NavBar = () => {
                 >
                     <Link
                         to="/"
-                        className={`hover:text-gray-400 ${
+                        className={`px-2 hover:text-gray-400 hover:border-b-2 hover:border-gray-400 hover:rounded-lg ${
                             pathname === "/" ? "text-gold" : ""
                         }`}
                     >
@@ -49,8 +49,8 @@ const NavBar = () => {
                 >
                     <Link
                         to="/projects"
-                        className={`hover:text-gray-400 ${
-                            pathname === "/projects" ? "text-gray-400" : ""
+                        className={`px-2 hover:text-gray-400 hover:border-b-2 hover:border-gray-400 hover:rounded-lg ${
+                            pathname === "/projects" ? "text-gold" : ""
                         }`}
                     >
                         &lt;Projects/&gt;
@@ -64,7 +64,7 @@ const NavBar = () => {
                 >
                     <Link
                         to="/blogs"
-                        className={`hover:text-gray-400 ${
+                        className={`px-2 hover:text-gray-400 hover:border-b-2 hover:border-gray-400 hover:rounded-lg ${
                             pathname === "/blogs" ? "text-gold" : ""
                         }`}
                     >
@@ -92,14 +92,14 @@ const NavBar = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1.5 }}
                 >
-                    <a
-                        href="/contact"
-                        className={`hover:text-gray-400 ${
+                    <Link
+                        to="/contact"
+                        className={`px-2 hover:text-gray-400 hover:border-b-2 hover:border-gray-400 hover:rounded-lg ${
                             pathname === "/contact" ? "text-gold" : ""
                         }`}
                     >
                         &lt;Contact/&gt;
-                    </a>
+                    </Link>
                 </motion.li>
             </ul>
 

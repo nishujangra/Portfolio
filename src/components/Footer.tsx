@@ -17,7 +17,7 @@ const Footer = () => {
                     className="text-white hover:text-gray-400"
                 >
                     <img
-                        src="/assets/git.svg"
+                        src="/assets/icons/git.svg"
                         alt="github"
                         className="w-6 h-6" 
                     />
@@ -40,7 +40,7 @@ const Footer = () => {
                     className="text-white hover:text-gray-400"
                 >
                     <img
-                        src="/assets/insta.svg"
+                        src="/assets/icons/insta.svg"
                         alt="instagram"
                         className="w-6 h-6"
                     />

@@ -25,7 +25,22 @@ const ProjectCard = ({ project }: { project: Project }) => {
                         className="w-full h-48 object-fill"
                     />
                 )} */}
-                <p>{project.desc}</p>
+                <p>
+                    {
+                        project.desc.length > 100
+                            ? `${project.desc.slice(0, 100)}`
+                            : project.desc
+                    }
+                    {
+                        project.desc.length > 100 ? (
+                            <span className="text-blue-500">
+                                ...Read More
+                            </span>
+                        ) : (
+                            ""
+                        )
+                    }
+                </p>
             </div>
             <div className="flex gap-4 flex-col">
                 <strong className="text-lg md:text-xl font-semibold">

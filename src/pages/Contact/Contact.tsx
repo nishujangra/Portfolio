@@ -55,11 +55,6 @@ const Contact = () => {
                         />
                         Location: Faridabad, Haryana, India
                     </p>
-
-                    {/* Special Offer */}
-                    <div className="mt-8 text-gold p-4 rounded-lg text-center shadow-lg">
-                        🎉 <strong>Special Offer:</strong> First 5 clients get <span className="font-bold">FREE services for 3 weeks!</span> Contact me now!
-                    </div>
                 </div>
             </div>
         </main>

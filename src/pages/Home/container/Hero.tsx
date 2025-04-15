@@ -37,7 +37,6 @@ const Hero = () => {
                     />
                 </motion.div>
             </div>
-
             <div>
                 <Button variant="outline" className="mt-8">
                     <a
