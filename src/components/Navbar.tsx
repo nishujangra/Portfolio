@@ -25,7 +25,7 @@ const NavBar = () => {
                     Nishant
                 </Link>
             </motion.h1>
-            <ul className="hidden md:flex space-x-6">
+            <ul className="hidden md:flex space-x-2">
                 <motion.li
                     className="text-md"
                     initial={{ opacity: 0, y: -50 }}
@@ -34,7 +34,7 @@ const NavBar = () => {
                 >
                     <Link
                         to="/"
-                        className={`px-2 hover:text-gray-400 hover:border-b-2 hover:border-gray-400 hover:rounded-lg ${
+                        className={`px-2 hover:text-gray-400 hover:rounded-lg ${
                             pathname === "/" ? "text-gold" : ""
                         }`}
                     >
@@ -49,7 +49,7 @@ const NavBar = () => {
                 >
                     <Link
                         to="/projects"
-                        className={`px-2 hover:text-gray-400 hover:border-b-2 hover:border-gray-400 hover:rounded-lg ${
+                        className={`px-2 hover:text-gray-400 hover:rounded-lg ${
                             pathname === "/projects" ? "text-gold" : ""
                         }`}
                     >
@@ -64,7 +64,7 @@ const NavBar = () => {
                 >
                     <Link
                         to="/blogs"
-                        className={`px-2 hover:text-gray-400 hover:border-b-2 hover:border-gray-400 hover:rounded-lg ${
+                        className={`px-2 hover:text-gray-400 hover:rounded-lg ${
                             pathname === "/blogs" ? "text-gold" : ""
                         }`}
                     >
@@ -94,7 +94,7 @@ const NavBar = () => {
                 >
                     <Link
                         to="/contact"
-                        className={`px-2 hover:text-gray-400 hover:border-b-2 hover:border-gray-400 hover:rounded-lg ${
+                        className={`px-2 hover:text-gray-400 hover:rounded-lg ${
                             pathname === "/contact" ? "text-gold" : ""
                         }`}
                     >

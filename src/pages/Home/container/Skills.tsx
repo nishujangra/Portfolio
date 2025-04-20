@@ -6,31 +6,32 @@ const Skills = () => {
 
             <div className="mt-6 flex flex-col space-y-4 p-4 rounded-lg mx-auto text-sm md:text-base">
                 <div className="">
-                    <span className="text-gray-400">
-                        <strong>Programming Languages: </strong>
+                    <span className="text-gray-300">
+                        <strong>Programming: </strong>
                     </span>
                     <span className="text-gray-400">
-                        Go, C++, JavaScript, Python, TypeScript
+                        Go, C++, Python, JavaScript (TypeScript), Shell
                     </span>
                 </div>
                 <div className="">
+                    <span className="text-gray-300">
+                        <strong>Backend & Frameworks: </strong>
+                    </span>
                     <span className="text-gray-400">
+                        Node.js, Express.js, Echo (Go), REST APIs, JWT, RBAC,
+                        Cron Jobs
+                    </span>
+                </div>
+                <div className="">
+                    <span className="text-gray-300">
                         <strong>Frontend Technologies: </strong>
                     </span>
                     <span className="text-gray-400">
-                        HTML5, CSS3, React, Tailwind CSS
+                        React.js, Vite, Tailwind CSS (basic to intermediate)
                     </span>
                 </div>
                 <div className="">
-                    <span className="text-gray-400">
-                        <strong>Backend Technologies: </strong>
-                    </span>
-                    <span className="text-gray-400">
-                        Node.js, Express, Echo, GORM, sqlc, REST APIs, Cron Jobs
-                    </span>
-                </div>
-                <div className="">
-                    <span className="text-gray-400">
+                    <span className="text-gray-300">
                         <strong>Databases & Caching: </strong>
                     </span>
                     <span className="text-gray-400">
@@ -38,19 +39,40 @@ const Skills = () => {
                     </span>
                 </div>
                 <div className="">
-                    <span className="text-gray-400">
+                    <span className="text-gray-300">
                         <strong>DevOps & Tools: </strong>
                     </span>
                     <span className="text-gray-400">
-                        cURL, Postman, Git, Github, BitBucket
+                        Linux (Ubuntu), Shell Scripting, Cron Jobs, Git, GitHub,
+                        VS Code, Postman, Bitbucket, cURL, BitBucket
                     </span>
                 </div>
                 <div className="">
-                    <span className="text-gray-400">
-                        <strong>Core Concepts: </strong>
+                    <span className="text-gray-300">
+                        <strong>
+                            Cloud & Deployment (Learning/Exploring):{" "}
+                        </strong>
                     </span>
                     <span className="text-gray-400">
-                        Data Structures, Algorithms, Networking, Operating Systems, DBMS
+                        Docker, Nginx, , OAuth 2.0
+                    </span>
+                </div>
+                <div className="">
+                    <span className="text-gray-300">
+                        <strong>CS Fundamentals:</strong>
+                    </span>
+                    <span className="text-gray-400">
+                        Data Structures & Algorithms (600+ LeetCode problems),
+                        DBMS, OS, Networking Basics
+                    </span>
+                </div>
+                <div>
+                    <span className="text-gray-300">
+                        <strong>Soft Skills:</strong>
+                    </span>
+                    <span className="text-gray-400">
+                        Technical Blogging, Documentation, Open Source
+                        Contributions, Agile Collaboration, Team Communication
                     </span>
                 </div>
             </div>

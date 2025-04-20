@@ -34,13 +34,13 @@ const Footer = () => {
                      />
                 </a>
                 <a
-                    href="https://instagram.com"
+                    href="https://x.com/nishujangra27"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white hover:text-gray-400"
                 >
                     <img
-                        src="/assets/icons/insta.svg"
+                        src="/assets/icons/x.svg"
                         alt="instagram"
                         className="w-6 h-6"
                     />

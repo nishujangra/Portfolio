@@ -36,7 +36,7 @@ const ProjectPage = () => {
                                                 {project.desc}
                                             </p>
                                             <div className="flex flex-wrap justify-center space-x-2">
-                                                <a 
+                                                <a
                                                     href={project.githubLink}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
@@ -64,6 +64,24 @@ const ProjectPage = () => {
                                                     </Button>
                                                 </a>
                                             </div>
+                                        </div>
+                                        <div className="flex gap-4 flex-col">
+                                            <h3 className="text-lg font-semibold">
+                                                Tech Stack:
+                                            </h3>
+                                            <div className="flex flex-wrap gap-2">
+                                                {project.iconLists?.map(
+                                                    (icon, index) => (
+                                                        <img
+                                                            key={index}
+                                                            src={`/assets/${icon}`}
+                                                            alt="icon"
+                                                            className="w-8 h-8 object-contain"
+                                                        />
+                                                    )
+                                                )}
+                                            </div>
+                                            
                                         </div>
                                     </div>
                                 </div>

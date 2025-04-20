@@ -1,5 +1,11 @@
 export const blogs = [
     {
+        title: "Setting Up Samaritan Proxy to Load Balance Two KeyDB Servers",
+        description:
+            "Learn how to set up Samaritan Proxy to load balance two KeyDB servers for improved performance and reliability.",
+        url: "https://bitbucket.org/tirveni/devuan/wiki/SAM-Proxy",
+    },
+    {
         title: "How to install KeyDB server in Debian 12(Bookworm) Linux using PPA Repositoies",
         description:
             "A detailed guide on installing KeyDB server in Debian 12 using PPA repositories.",

@@ -27,12 +27,12 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 )} */}
                 <p>
                     {
-                        project.desc.length > 100
-                            ? `${project.desc.slice(0, 100)}`
+                        project.desc.length > 150
+                            ? `${project.desc.slice(0, 150)}`
                             : project.desc
                     }
                     {
-                        project.desc.length > 100 ? (
+                        project.desc.length > 150 ? (
                             <span className="text-blue-500">
                                 ...Read More
                             </span>
@@ -41,22 +41,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
                         )
                     }
                 </p>
-            </div>
-            <div className="flex gap-4 flex-col">
-                <strong className="text-lg md:text-xl font-semibold">
-                    Tech Stack
-                </strong>
-                <div className="flex gap-4">
-                    {project.iconLists &&
-                        project.iconLists.map((icon) => (
-                            <img
-                                key={icon}
-                                src={`/assets/${icon}`}
-                                alt={project.title}
-                                className="w-8 h-8 object-fill"
-                            />
-                        ))}
-                </div>
             </div>
             <div className="flex gap-4 justify-between">
                 <a
