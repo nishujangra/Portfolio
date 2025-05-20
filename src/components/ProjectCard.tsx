@@ -26,7 +26,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
                     />
                 )} */}
                 <p>
-                    {
+                    {project.desc}
+                    {/* {
                         project.desc.length > 150
                             ? `${project.desc.slice(0, 150)}`
                             : project.desc
@@ -39,7 +40,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                         ) : (
                             ""
                         )
-                    }
+                    } */}
                 </p>
             </div>
             <div className="flex gap-4 justify-between">

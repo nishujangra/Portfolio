@@ -1,6 +1,5 @@
 import ProjectCard from "@/components/ProjectCard";
 import projects from "@/data/projects";
-import { Link } from "react-router-dom";
 
 const Projects = () => {
     return (
@@ -13,12 +12,7 @@ const Projects = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
                     {projects.map((project) => (
-                        <Link
-                            to={`/projects/${project.id}`}
-                            className="w-full h-full flex"
-                        >
                             <ProjectCard project={project} />
-                        </Link>
                     ))}
                 </div>
             </section>
