@@ -18,13 +18,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 <div className="flex justify-center">
                     <hr className="h-1 bg-gold rounded-lg w-3/4" />
                 </div>
-                {/* {project.img && (
-                    <img
-                        src={project.img}
-                        alt={project.title}
-                        className="w-full h-48 object-fill"
-                    />
-                )} */}
                 <p>
                     {project.desc}
                     {/* {
@@ -42,6 +35,16 @@ const ProjectCard = ({ project }: { project: Project }) => {
                         )
                     } */}
                 </p>
+            </div>
+            <div className="flex">
+                {project.iconLists?.map((icon, index) => (
+                    <img
+                        key={index}
+                        src={icon}
+                        alt="icon"
+                        className="w-8 h-8 m-2" // Adjusted size to be consistent
+                    />
+                ))}
             </div>
             <div className="flex gap-4 justify-between">
                 <a
