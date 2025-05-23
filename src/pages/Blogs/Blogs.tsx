@@ -5,8 +5,8 @@ const Blogs = () => {
     return (
         <main className="p-6">
             <div className="flex flex-col justify-center items-center min-h-[80vh]">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 rounded-lg shadow-lg p-8 border border-pink-200">
-                    <h1 className="text-5xl font-extrabold text-center mb-8 text-pink-600">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 rounded-lg shadow-lg p-8 border border-yellow-200">
+                    <h1 className="text-5xl font-extrabold text-center mb-8 text-yellow-600">
                         Blog Links
                     </h1>
                     <div className="mt-8">
@@ -17,7 +17,7 @@ const Blogs = () => {
                                         to={blog.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-pink-500 hover:underline hover:text-pink-700 transition duration-300"
+                                        className="text-yellow-500 hover:underline hover:text-yellow-700 transition duration-300"
                                     >
                                         {blog.title}
                                     </Link>
