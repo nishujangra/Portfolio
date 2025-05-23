@@ -2,7 +2,6 @@ interface Project {
     id: number;
     title: string;
     desc: string;
-    img: string;
     iconLists: string[] | undefined;
     demoLink: string;
     githubLink: string;
