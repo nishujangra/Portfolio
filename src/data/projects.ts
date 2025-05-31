@@ -1,4 +1,16 @@
 const projects = [
+  {
+  "id": 10,
+  "title": "Firewall Management System",
+  "desc": "Perl-based web interface for Shorewall firewall configuration with CouchDB authentication, real-time monitoring, and network diagnostic tools.",
+  "iconLists": [
+    "assets/icons/perl.svg",
+    "assets/icons/couchdb.svg",
+    "assets/icons/linux.svg"
+  ],
+  "demoLink": "",
+  "githubLink": "https://bitbucket.org/tirveni/fireshorewall/src/master/"
+},
     {
       id: 0,
       title: "Intuit Go SDK",
