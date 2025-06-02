@@ -10,16 +10,15 @@ const Skills = () => {
                         <strong>Programming: </strong>
                     </span>
                     <span className="text-gray-400">
-                        Go, C++, Python, JavaScript (TypeScript), Shell
+                        Go, Perl, C++, Python, JavaScript, TypeScript
                     </span>
                 </div>
                 <div className="">
                     <span className="text-gray-300">
-                        <strong>Backend & Frameworks: </strong>
+                        <strong>Backend: </strong>
                     </span>
                     <span className="text-gray-400">
-                        Node.js, Express.js, Echo (Go), REST APIs, JWT, RBAC,
-                        Cron Jobs
+                        Echo (Go), Express.js (Node.js), REST APIs, OAuth, JWT, RBAC
                     </span>
                 </div>
                 <div className="">
@@ -35,7 +34,15 @@ const Skills = () => {
                         <strong>Databases & Caching: </strong>
                     </span>
                     <span className="text-gray-400">
-                        PostgreSQL, MongoDB, KeyDB, Redis
+                        PostgreSQL, MongoDB, CouchDB, MySQL, Redis
+                    </span>
+                </div>
+                <div className="">
+                    <span className="text-gray-300">
+                        <strong>Systems & Infra: </strong>
+                    </span>
+                    <span className="text-gray-400">
+                        Ubuntu, Debian, Devuan, Shell scripting, iptables, Shorewall, dnsmasq, Cron Jobs
                     </span>
                 </div>
                 <div className="">
@@ -43,8 +50,7 @@ const Skills = () => {
                         <strong>DevOps & Tools: </strong>
                     </span>
                     <span className="text-gray-400">
-                        Linux (Ubuntu), Shell Scripting, Cron Jobs, Git, GitHub,
-                        VS Code, Postman, Bitbucket, cURL, BitBucket
+                        Git, GitHub, Bitbucket, Postman, VS Code
                     </span>
                 </div>
                 <div className="">
@@ -62,8 +68,7 @@ const Skills = () => {
                         <strong>CS Fundamentals:</strong>
                     </span>
                     <span className="text-gray-400">
-                        Data Structures & Algorithms (600+ LeetCode problems),
-                        DBMS, OS, Networking Basics
+                        DSA (600+ problems), OS, DBMS, Networking, OOP
                     </span>
                 </div>
                 <div>
