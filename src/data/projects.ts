@@ -13,6 +13,30 @@ const projects = [
 },
     {
       id: 0,
+      title: "Serac - RBAC System",
+      desc: "A Rust-native RBAC (Role-Based Access Control) system built with Rocket framework for managing fine-grained, privilege-based access with speed, security, and clarity.",
+      iconLists: [
+        "assets/icons/rust.svg",
+        "assets/icons/postgres.png",
+        "assets/icons/javascript.svg",
+        "assets/icons/tailwind.svg",
+      ],
+      demoLink: "",
+      githubLink: "https://github.com/nishujangra/serac",
+    },
+    {
+      id: 1,
+      title: "BalancerX - Load Balancer",
+      desc: "A lightweight, high-performance load balancer written in Go supporting round-robin and random load balancing strategies with HTTP and TCP proxying capabilities.",
+      iconLists: [
+        "assets/icons/go.svg",
+        "assets/icons/linux.svg",
+      ],
+      demoLink: "",
+      githubLink: "https://github.com/nishujangra/balancerx",
+    },
+    {
+      id: 2,
       title: "Intuit Go SDK",
       desc: "An open-source Golang SDK for QuickBooks Payments API enabling secure charge management, refunds, and OAuth 2.0-based integrations.",
       iconLists: [
@@ -22,7 +46,7 @@ const projects = [
       githubLink: "https://github.com/nishujangra/intuit-go",
     },
     {
-      id: 1,
+      id: 3,
       title: "Eagleowl",
       desc: "A secure role-based book management system built with Go, PostgreSQL, and Google OAuth, featuring RBAC and real-world access control.",
       iconLists: [
@@ -34,7 +58,7 @@ const projects = [
       githubLink: "https://bitbucket.org/tirveni/eagleowl/src/master/",
     },
     {
-      id: 2,
+      id: 4,
       title: "Social Feed",
       desc: "A simple social feed backend using GraphQL and gRPC that returns the latest posts from followed users with mock data.",
       iconLists: [
@@ -45,7 +69,7 @@ const projects = [
       githubLink: "https://github.com/nishujangra/social-feed",
     },
     {
-      id: 3,
+      id: 5,
       title: "Weather Go Library",
       desc: "A Go library that fetches real-time weather data using the OpenWeatherMap API, with a simple interface for developer use.",
       iconLists: ["assets/icons/go.svg"],
@@ -53,7 +77,7 @@ const projects = [
       githubLink: "https://github.com/nishujangra/weather-library",
     },
     {
-      id: 4,
+      id: 6,
       title: "Sharp Edit APIs",
       desc: "A Node.js REST API for real-time image upload and transformations using the Sharp library.",
       iconLists: [
@@ -66,7 +90,7 @@ const projects = [
       githubLink: "https://github.com/nishujangra/sharp-edit",
     },
     {
-      id: 5,
+      id: 7,
       title: "HunterXPokemon - Treasure Hunt Game",
       desc: "A treasure hunt game where you have to find the hidden pokemons in the map and catch them all to win the game.",
       iconLists: [
@@ -80,7 +104,7 @@ const projects = [
       githubLink: "https://github.com/nishujangra/pokemonXHunter",
     },
     {
-      id: 6,
+      id: 8,
       title: "Keeper - React App",
       desc: "Keeper-React-App is a note-taking app built with React, featuring an intuitive interface for creating, editing, and deleting notes.",
       iconLists: [
@@ -93,9 +117,9 @@ const projects = [
       githubLink: "https://github.com/nishujangra/Keeper-React-App",
     },
     {
-      id: 7,
+      id: 9,
       title: "Cipher Chest",
-      desc: "A simple, secure password manager that stores encrypted passwords in your browser’s local storage, with an easy-to-use interface.",
+      desc: "A simple, secure password manager that stores encrypted passwords in your browser's local storage, with an easy-to-use interface.",
       iconLists: [
         "assets/icons/vite.svg",
         "assets/icons/react.svg",
@@ -108,7 +132,7 @@ const projects = [
       githubLink: "https://github.com/nishujangra/cipher-chest",
     },
     {
-      id: 8,
+      id: 10,
       title: "Love Calculator",
       desc: "A fun web app that calculates compatibility between two names using ASCII value math.",
       iconLists: ["assets/icons/python.svg"],
