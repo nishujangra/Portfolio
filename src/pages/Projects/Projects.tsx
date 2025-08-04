@@ -6,7 +6,7 @@ const Projects = () => {
         <main className="p-6 bg-[#111827] min-h-screen">
             <div className="flex flex-col justify-center items-center min-h-[80vh]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-lg shadow-lg p-8 border border-gray-700 bg-gray-800/50 backdrop-blur-sm">
-                    <h1 className="text-5xl font-extrabold text-center mb-8">
+                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-6">
                         Projects
                     </h1>
                     <p className="text-center mb-8 max-w-2xl mx-auto text-gray-300">

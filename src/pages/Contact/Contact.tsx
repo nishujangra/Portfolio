@@ -1,59 +1,115 @@
-import { Mail, MapPin, Smartphone } from "lucide-react"
-
+import { Mail, MapPin, Smartphone, Github, Linkedin, Coffee } from "lucide-react"
 
 const Contact = () => {
     return (
         <main className="w-full h-full py-8 md:p-0">
-            <div className="grid grid-cols-1 gap-8 py-7 px-10">
-                <div className="hidden lg:block">
-                    <h3 className="text-lg font-bold text-white mb-4">My Location:</h3>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14011.614433009143!2d76.65282199999999!3d28.6026684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1742813206765!5m2!1sen!2sin"
-                        width="100%"
-                        height="400"
-                        style={{ border: 0 }}
-                        allowFullScreen={true}
-                        loading="eager"
-                        className="rounded-lg shadow-lg"
-                    ></iframe>
+            <div className="max-w-4xl mx-auto px-6 py-8">
+                <div className="text-center mb-8">
+                    <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+                    <p className="text-gray-400 text-lg">
+                        Let's connect and build something amazing together!
+                    </p>
                 </div>
 
-                {/* Contact Info */}
-                <div className="bg-background p-6 rounded-lg shadow-lg text-sm">
-                    <h3 className="text-lg font-bold mb-4">
-                        Get in Touch
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {/* Contact Info */}
+                    <div className="bg-gray-800/50 p-6 rounded-lg shadow-lg border border-gray-700">
+                        <h3 className="text-xl font-bold mb-6 text-gold">
+                            Contact Information
+                        </h3>
+                        <div className="space-y-4">
+                            <div className="flex items-center gap-3 text-gray-300">
+                                <Mail color="gold" size={20} />
+                                <div>
+                                    <p className="font-medium">Email</p>
+                                    <a
+                                        href="mailto:ndjangra1027@example.com"
+                                        className="text-blue-400 hover:text-blue-300 transition-colors"
+                                    >
+                                        ndjangra1027@example.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-3 text-gray-300">
+                                <Smartphone color="gold" size={20} />
+                                <div>
+                                    <p className="font-medium">Phone</p>
+                                    <a
+                                        href="tel:+919896774495"
+                                        className="text-blue-400 hover:text-blue-300 transition-colors"
+                                    >
+                                        +91 9896774495
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-3 text-gray-300">
+                                <MapPin color="gold" size={20} />
+                                <div>
+                                    <p className="font-medium">Location</p>
+                                    <p>Jhajjar, Haryana, India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Social Links & Support */}
+                    <div className="bg-gray-800/50 p-6 rounded-lg shadow-lg border border-gray-700">
+                        <h3 className="text-xl font-bold mb-6 text-gold">
+                            Connect & Support
+                        </h3>
+                        <div className="space-y-4">
+                            <div className="flex items-center gap-3 text-gray-300">
+                                <Github color="gold" size={20} />
+                                <div>
+                                    <p className="font-medium">GitHub</p>
+                                    <a
+                                        href="https://github.com/nishujangra"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blue-400 hover:text-blue-300 transition-colors"
+                                    >
+                                        github.com/nishujangra
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="flex items-center gap-3 text-gray-300">
+                                <Linkedin color="gold" size={20} />
+                                <div>
+                                    <p className="font-medium">LinkedIn</p>
+                                    <a
+                                        href="https://linkedin.com/in/nishujangra27"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blue-400 hover:text-blue-300 transition-colors"
+                                    >
+                                        linkedin.com/in/nishujangra27
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="pt-4">
+                                <a
+                                    href="https://buymeacoffee.com/nishujangra27"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-4 py-2 rounded-lg transition-colors duration-200"
+                                >
+                                    <Coffee size={18} />
+                                    Buy Me a Coffee
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Additional Info */}
+                <div className="mt-8 bg-gray-800/30 p-6 rounded-lg border border-gray-700">
+                    <h3 className="text-xl font-bold mb-4 text-gold">
+                        Let's Work Together
                     </h3>
-                    <p className="text-gray-400 mb-4 flex gap-2">
-                        <Mail
-                            color="gold"
-                            size={20}
-                        /> Email:{" "}
-                        <a
-                            href="mailto:ndjangra1027@example.com"
-                            className="underline"
-                        >
-                            ndjangra1027@example.com
-                        </a>
-                    </p>
-                    <p className="text-gray-400 mb-4 flex gap-2">
-                        <Smartphone
-                            color="gold"
-                            size={20}
-                        />
-                        Phone:{" "}
-                        <a
-                            href="tel:+919896774495"
-                            className="underline"
-                        >
-                            +91 9896774495
-                        </a>
-                    </p>
-                    <p className="text-gray-400 flex gap-2">
-                        <MapPin
-                            color="gold"
-                            size={20}
-                        />
-                        Location: Faridabad, Haryana, India
+                    <p className="text-gray-300 leading-relaxed">
+                        I'm always open to discussing new opportunities, collaborations, or just having a chat about technology. 
+                        Whether you have a project in mind, want to discuss backend architecture, or just want to connect, 
+                        feel free to reach out!
                     </p>
                 </div>
             </div>
