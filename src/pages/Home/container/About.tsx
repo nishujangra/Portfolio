@@ -10,7 +10,7 @@ const About = () => {
                 <div className="mt-6 space-y-4 p-4 mx-auto text-sm md:text-base">
                     <strong className="text-lg md:text-xl font-semibold">
                         Hi, I&apos;m Nishant
-                    </strong>{" "}
+                    </strong>{" "}  
                     , a Backend Engineer skilled in secure APIs, distributed systems, and Linux tooling. 
                     Currently ranked{" "}
                     <strong className="text-blue-400">Top 11.8% in METI Japan IT Contest 2025</strong>.
@@ -18,7 +18,7 @@ const About = () => {
                     <br />
                     I specialize in{" "}
                     <strong className="text-blue-400">Go, Redis, and RBAC systems</strong>
-                    , with strong open-source contributions. Currently interning as a Backend Developer at Udyansh, 
+                    , with strong open-source contributions. Currently working as a Backend Developer at Udyansh, 
                     I work on API integrations, cron jobs, and JWT-based authentication systems.
                     <br />
                     <br />

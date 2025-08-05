@@ -16,7 +16,7 @@ const Footer = () => {
 
 
                     {/* Contact & Support */}
-                    <div className="text-center md:text-left">
+                    <div className="text-center md:text-right">
                         <h3 className="text-lg font-semibold text-gold mb-3">Connect & Support</h3>
                         <div className="space-y-2">
                             <a 
