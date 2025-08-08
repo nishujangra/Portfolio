@@ -23,7 +23,7 @@ const Footer = () => {
                                 href="mailto:ndjangra1027@example.com"
                                 className="block text-gray-400 hover:text-gold transition-colors text-sm"
                             >
-                                ndjangra1027@example.com
+                                ndjangra1027@gmail.com
                             </a>
                             <a 
                                 href="https://buymeacoffee.com/nishujangra27"
