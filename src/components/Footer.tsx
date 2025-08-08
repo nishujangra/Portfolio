@@ -20,7 +20,7 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold text-gold mb-3">Connect & Support</h3>
                         <div className="space-y-2">
                             <a 
-                                href="mailto:ndjangra1027@example.com"
+                                href="mailto:ndjangra1027@gmail.com"
                                 className="block text-gray-400 hover:text-gold transition-colors text-sm"
                             >
                                 ndjangra1027@gmail.com
