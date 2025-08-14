@@ -7,6 +7,13 @@ export const blogs = [
         tags: ["Rust", "Rocket.rs", "JWT", "Authentication", "Argon2", "Web Development"],
         category: "Programming & Development"
     },
+    {
+        title: "Implementing Middleware in Rocket.rs",
+        description: "A guide to manage middlewares using Request Guard",
+        url: "https://nishujangra27.hashnode.dev/implementing-middleware-in-rocketrs-rust",
+        tags: ["Rust", "Rocket.rs", "JWT", "Middleware", "Request-Guard"],
+        category: "Programming & Development"
+    },
 
     // System Administration & Linux Basics
     {
