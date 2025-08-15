@@ -129,13 +129,13 @@ export const blogs = [
         tags: ["Ansible", "DevOps", "Automation", "Devuan", "Configuration Management"],
         category: "Other DevOps & Tools"
     },
-    {
-        title: "Canine Setup: Lightweight Container Orchestration with Docker Compose",
-        description: "Learn how to install and run Canine, a lightweight Docker-based container orchestration tool, with practical usage tips.",
-        url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Canine-Setup",
-        tags: ["Docker", "Container Orchestration", "Canine", "DevOps"],
-        category: "Other DevOps & Tools"
-    },
+    // {
+    //     title: "Canine Setup: Lightweight Container Orchestration with Docker Compose",
+    //     description: "Learn how to install and run Canine, a lightweight Docker-based container orchestration tool, with practical usage tips.",
+    //     url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Canine-Setup",
+    //     tags: ["Docker", "Container Orchestration", "Canine", "DevOps"],
+    //     category: "Other DevOps & Tools"
+    // },
     {
         title: "How to Install Apache CouchDB on Debian",
         description: "Step-by-step guide to installing Apache CouchDB on a Debian-based system, including required dependencies and service configuration.",
