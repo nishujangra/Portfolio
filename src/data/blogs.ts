@@ -63,6 +63,13 @@ export const blogs = [
 
     // Juju & DevOps
     {
+        title: "Juju: Deploy PostgreSQL",
+        description: "A simple guide to install and set credentials for the postgresql charm in juju",
+        url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Juju-Deploy-PostgreSQL",
+        tags: ["Juju", "DevOps", "Deployment", "PostgreSQL", "Database"],
+        category: "Juju & DevOps"
+    },
+    {
         title: "Getting Started with Juju",
         description: "A comprehensive guide to getting started with Juju for application modeling and deployment.",
         url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Getting-Started-Juju",
