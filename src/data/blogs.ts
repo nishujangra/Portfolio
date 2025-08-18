@@ -83,6 +83,13 @@ export const blogs = [
         tags: ["Juju", "Nginx", "Ubuntu", "Deployment", "Web Server"],
         category: "Juju & DevOps"
     },
+    {
+        title: "Juju Troubleshooting",
+        description: "Basic Juju troubleshooting tips as I face them and debug them, I will add about those problems in this blog.",
+        url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Juju-Troubleshooting",
+        tags: ["Juju", "Troubleshooting", "Ubuntu"],
+        category: "Juju & DevOps"
+    },
 
     // Redis & KeyDB
     {
