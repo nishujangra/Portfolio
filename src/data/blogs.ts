@@ -14,6 +14,14 @@ export const blogs = [
         tags: ["Rust", "Rocket.rs", "JWT", "Middleware", "Request-Guard"],
         category: "Programming & Development"
     },
+    {
+    title: "Getting Started with Rocket Fairings: Implementing a Logger",
+        description: "Learn how to use Rocket.rs Fairings to implement a request/response logger, with real-world use cases and flow diagrams.",
+        url: "https://nishujangra27.hashnode.dev/getting-started-with-rocket-fairings-implementing-a-logger",
+        tags: ["Rust", "Rocket.rs", "Fairing", "Logger", "Web Development"],
+        category: "Programming & Development"
+    },
+
 
     // System Administration & Linux Basics
     {
