@@ -8,6 +8,14 @@ export const blogs = [
         category: "Programming & Development"
     },
     {
+        "title": "Why Rust Forces Immutability?",
+        "description": "A beginner-friendly explanation of Rust's immutability, how it ensures memory safety, prevents race conditions, and when to use mutable variables with the `mut` keyword.",
+        "url": "https://medium.com/@nishujangra27/why-rust-forces-immutability-04e40cbf2e46",
+        "tags": ["Rust", "Immutability", "Memory Safety", "Concurrency", "Programming"],
+        "category": "Rust & Systems Programming"
+    },
+
+    {
         title: "Implementing Middleware in Rocket.rs",
         description: "A guide to manage middlewares using Request Guard",
         url: "https://nishujangra27.hashnode.dev/implementing-middleware-in-rocketrs-rust",
@@ -15,7 +23,7 @@ export const blogs = [
         category: "Programming & Development"
     },
     {
-    title: "Getting Started with Rocket Fairings: Implementing a Logger",
+        title: "Getting Started with Rocket Fairings: Implementing a Logger",
         description: "Learn how to use Rocket.rs Fairings to implement a request/response logger, with real-world use cases and flow diagrams.",
         url: "https://nishujangra27.hashnode.dev/getting-started-with-rocket-fairings-implementing-a-logger",
         tags: ["Rust", "Rocket.rs", "Fairing", "Logger", "Web Development"],
@@ -76,6 +84,13 @@ export const blogs = [
         url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Juju-Deploy-PostgreSQL",
         tags: ["Juju", "DevOps", "Deployment", "PostgreSQL", "Database"],
         category: "Juju & DevOps"
+    },
+    {
+        "title": "Juju: PostgreSQL Clustering & Replication",
+        "description": "A step-by-step guide to scale PostgreSQL on Juju by adding multiple units, setting passwords, and verifying replication across the cluster.",
+        "url": "https://bitbucket.org/tirveni/devuan/wiki/nishant/Juju-PostgreSQL-Clustering",
+        "tags": ["Juju", "DevOps", "PostgreSQL", "Database", "Clustering", "Replication", "High Availability"],
+        "category": "Juju & DevOps"
     },
     {
         title: "Getting Started with Juju",
