@@ -2,7 +2,6 @@ import { blogs } from "@/data/blogs";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
-    // Group blogs by category field
     const groupedBlogs = blogs.reduce((acc, blog) => {
         const category = blog.category || "Other";
         if (!acc[category]) {
@@ -24,32 +23,32 @@ const Blogs = () => {
                         database management, and software development.
                     </p>
                     
-                    <div className="space-y-8">
+                    <div className="space-y-12">
                         {Object.entries(groupedBlogs).map(([category, categoryBlogs]) => (
-                            <div key={category} className="border-b border-gray-700 pb-6 last:border-b-0">
-                                <h2 className="text-2xl font-bold mb-4 text-gray-100">
+                            <div key={category} className="pb-6 border-b border-gray-700 last:border-b-0">
+                                <h2 className="text-2xl font-bold mb-6 text-gray-100">
                                     {category}
                                 </h2>
-                                <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+                                <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                                     {categoryBlogs.map((blog, index) => (
                                         <div 
                                             key={index} 
-                                            className="bg-gray-900/50 rounded-lg p-4 hover:bg-gray-800/70 transition-colors duration-200 border border-gray-700"
+                                            className="bg-gray-900/50 rounded-lg p-5 hover:bg-gray-800/70 transition-colors duration-200 border border-gray-700 h-full flex flex-col"
                                         >
                                             <Link
                                                 to={blog.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="block group"
+                                                className="flex flex-col h-full"
                                             >
-                                                <h3 className="text-lg font-semibold transition-colors duration-200 mb-2 line-clamp-2">
+                                                <h3 className="text-lg font-semibold mb-2 line-clamp-2 group-hover:text-white transition-colors duration-200">
                                                     {blog.title}
                                                 </h3>
                                                 <p className="text-gray-300 text-sm mb-3 line-clamp-3">
                                                     {blog.description}
                                                 </p>
                                                 {blog.tags && (
-                                                    <div className="flex flex-wrap gap-1 mb-3">
+                                                    <div className="flex flex-wrap gap-1 mb-4">
                                                         {blog.tags.map((tag, tagIndex) => (
                                                             <span
                                                                 key={tagIndex}
@@ -60,7 +59,7 @@ const Blogs = () => {
                                                         ))}
                                                     </div>
                                                 )}
-                                                <div className="flex items-center text-xs text-gray-400">
+                                                <div className="flex items-center text-xs text-gray-400 mt-auto">
                                                     <span className="inline-flex items-center">
                                                         <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                                             <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
