@@ -38,7 +38,7 @@ const Skills = () => {
                         Backend/Infra
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {["REST APIs", "Echo", "RBAC", "OAuth 2.0", "JWT", "Express.js", "Rocket.rs"].map((skill, index) => (
+                        {["REST APIs", "Echo", "RBAC", "OAuth 2.0", "JWT", "Express.js"].map((skill, index) => (
                             <span key={index} className="bg-green-600/30 text-green-200 px-3 py-1 rounded-full text-sm font-medium border border-green-500/50">
                                 {skill}
                             </span>
