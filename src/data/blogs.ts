@@ -12,9 +12,15 @@ export const blogs = [
         "description": "A beginner-friendly explanation of Rust's immutability, how it ensures memory safety, prevents race conditions, and when to use mutable variables with the `mut` keyword.",
         "url": "https://medium.com/@nishujangra27/why-rust-forces-immutability-04e40cbf2e46",
         "tags": ["Rust", "Immutability", "Memory Safety", "Concurrency", "Programming"],
-        "category": "Rust & Systems Programming"
+        "category": "Programming & Development"
     },
-
+    {
+        "title": "Why do we need lifetimes in Rust?",
+        "description": "A beginner-friendly explanation of why lifetimes exist in Rust, how they prevent dangling references, and how the borrow checker enforces memory safety.",
+        "url": "https://medium.com/@nishujangra27/why-do-we-need-lifetimes-in-rust-16f12173c30a",
+        "tags": ["Rust", "Lifetime", "Learning Rust"],
+        "category": "Programming & Development"
+    },
     {
         title: "Implementing Middleware in Rocket.rs",
         description: "A guide to manage middlewares using Request Guard",
