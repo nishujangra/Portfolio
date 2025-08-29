@@ -20,7 +20,7 @@ const About = () => {
                     
                     <p>
                         I work primarily with{" "}
-                        <strong className="text-blue-400">Go, Rust, PostgreSQL, and Redis</strong>,
+                        <strong className="text-blue-400">Go, PostgreSQL, and Redis</strong>,
                         and have hands-on experience in{" "}
                         <strong className="text-blue-400">
                             RBAC systems, load balancing, clustering, and orchestration
@@ -35,19 +35,15 @@ const About = () => {
                     <p>
                         Beyond work, I contribute actively to{" "}
                         <strong className="text-blue-400">open source</strong> — 
-                        projects like <strong>Serac</strong> (Rust RBAC Auth), 
-                        <strong>BalancerX</strong> (Go Load Balancer), and 
-                        <strong>Intuit Go SDK</strong>. 
+                        projects like <strong>Serac</strong> (Rust RBAC Auth), and 
+                        <strong>BalancerX</strong> (Go Load Balancer). 
                         I also document my learning through{" "}
                         <strong className="text-blue-400">technical blogs and deployment guides</strong>.
                     </p>
 
                     <p>
                         I enjoy solving backend scaling challenges, designing infra workflows, 
-                        and writing code that is{" "}
-                        <strong className="text-blue-400">
-                            fast, secure, and well-documented
-                        </strong>.
+                        and writing code that is{" "}fast, secure, and well-documented
                     </p>
                 </div>
             </div>
