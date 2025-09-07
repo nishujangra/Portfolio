@@ -31,18 +31,6 @@ const Contact = () => {
                                 </div>
                             </div>
                             <div className="flex items-center gap-3 text-gray-300">
-                                <Smartphone color="gold" size={20} />
-                                <div>
-                                    <p className="font-medium">Phone</p>
-                                    <a
-                                        href="tel:+919896774495"
-                                        className="text-blue-400 hover:text-blue-300 transition-colors"
-                                    >
-                                        +91 9896774495
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="flex items-center gap-3 text-gray-300">
                                 <MapPin color="gold" size={20} />
                                 <div>
                                     <p className="font-medium">Location</p>
