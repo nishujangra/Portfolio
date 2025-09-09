@@ -157,6 +157,17 @@ export const blogs = [
         category: "Redis & KeyDB"
     },
 
+
+    // AI & LLMs
+    {
+        title: "Setting Up LlamaEdge on Devuan with DeepSeek R1 1.5B",
+        description: "Step-by-step guide to setting up LlamaEdge with WasmEdge on a Devuan system. Learn how to run DeepSeek R1 1.5B locally using CLI and a browser-based chatbot UI.",
+        url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Setup-LlamaEdge",
+        tags: ["LlamaEdge", "WasmEdge", "DeepSeek", "LLM", "Devuan", "AI"],
+        category: "AI & LLMs"
+    },
+
+
     // Other DevOps & Tools
     {
         title: "Ansible Lab Setup on Devuan",
