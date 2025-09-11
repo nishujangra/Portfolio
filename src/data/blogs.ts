@@ -8,18 +8,18 @@ export const blogs = [
         category: "Programming & Development"
     },
     {
-        "title": "Why Rust Forces Immutability?",
-        "description": "A beginner-friendly explanation of Rust's immutability, how it ensures memory safety, prevents race conditions, and when to use mutable variables with the `mut` keyword.",
-        "url": "https://medium.com/@nishujangra27/why-rust-forces-immutability-04e40cbf2e46",
-        "tags": ["Rust", "Immutability", "Memory Safety", "Concurrency", "Programming"],
-        "category": "Programming & Development"
+        title: "Why Rust Forces Immutability?",
+        description: "A beginner-friendly explanation of Rust's immutability, how it ensures memory safety, prevents race conditions, and when to use mutable variables with the `mut` keyword.",
+        url: "https://medium.com/@nishujangra27/why-rust-forces-immutability-04e40cbf2e46",
+        tags: ["Rust", "Immutability", "Memory Safety", "Concurrency", "Programming"],
+        category: "Programming & Development"
     },
     {
-        "title": "Why do we need lifetimes in Rust?",
-        "description": "A beginner-friendly explanation of why lifetimes exist in Rust, how they prevent dangling references, and how the borrow checker enforces memory safety.",
-        "url": "https://medium.com/@nishujangra27/why-do-we-need-lifetimes-in-rust-16f12173c30a",
-        "tags": ["Rust", "Lifetime", "Learning Rust"],
-        "category": "Programming & Development"
+        title: "Why do we need lifetimes in Rust?",
+        description: "A beginner-friendly explanation of why lifetimes exist in Rust, how they prevent dangling references, and how the borrow checker enforces memory safety.",
+        url: "https://medium.com/@nishujangra27/why-do-we-need-lifetimes-in-rust-16f12173c30a",
+        tags: ["Rust", "Lifetime", "Learning Rust"],
+        category: "Programming & Development"
     },
     {
         title: "Implementing Middleware in Rocket.rs",
@@ -66,6 +66,14 @@ export const blogs = [
         tags: ["Linux", "Networking", "DNS", "Troubleshooting", "DevOps"],
         category: "System Administration & Linux Basics"
     },
+    {
+        title: "Fixing Brave Browser Snap Error on Ubuntu",
+        description: "A troubleshooting guide to resolve Brave Browser startup issues caused by Snap confinement errors on Ubuntu 24.04 with X11.",
+        url: "https://medium.com/@nishujangra27/fixing-brave-browser-snap-error-on-ubuntu-647fc2e61a84",
+        tags: ["Linux", "Snap", "Brave Browser", "X11", "Ubuntu 24.04"],
+        category: "System Administration & Linux Basics"
+    },
+
 
     // Networking & Infrastructure
     {
@@ -92,11 +100,18 @@ export const blogs = [
         category: "Juju & DevOps"
     },
     {
-        "title": "Juju: PostgreSQL Clustering & Replication",
-        "description": "A step-by-step guide to scale PostgreSQL on Juju by adding multiple units, setting passwords, and verifying replication across the cluster.",
-        "url": "https://bitbucket.org/tirveni/devuan/wiki/nishant/Juju-PostgreSQL-Clustering",
-        "tags": ["Juju", "DevOps", "PostgreSQL", "Database", "Clustering", "Replication", "High Availability"],
-        "category": "Juju & DevOps"
+        title: "Juju: PostgreSQL Clustering & Replication",
+        description: "A step-by-step guide to scale PostgreSQL on Juju by adding multiple units, setting passwords, and verifying replication across the cluster.",
+        url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Juju-PostgreSQL-Clustering",
+        tags: ["Juju", "DevOps", "PostgreSQL", "Database", "Clustering", "Replication", "High Availability"],
+        category: "Juju & DevOps"
+    },
+    {
+        title: "Juju: Enable SSL for PostgreSQL",
+        description: "Step-by-step guide to secure PostgreSQL connections in Juju using the self-signed-certificates charm and SSL/TLS.",
+        url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Juju-Enable-SSL-Postgres",
+        tags: ["Juju", "DevOps", "PostgreSQL", "Database Security", "SSL", "TLS"],
+        category: "Juju & DevOps"
     },
     {
         title: "Getting Started with Juju",
@@ -176,13 +191,6 @@ export const blogs = [
         tags: ["Ansible", "DevOps", "Automation", "Devuan", "Configuration Management"],
         category: "Other DevOps & Tools"
     },
-    // {
-    //     title: "Canine Setup: Lightweight Container Orchestration with Docker Compose",
-    //     description: "Learn how to install and run Canine, a lightweight Docker-based container orchestration tool, with practical usage tips.",
-    //     url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Canine-Setup",
-    //     tags: ["Docker", "Container Orchestration", "Canine", "DevOps"],
-    //     category: "Other DevOps & Tools"
-    // },
     {
         title: "How to Install Apache CouchDB on Debian",
         description: "Step-by-step guide to installing Apache CouchDB on a Debian-based system, including required dependencies and service configuration.",
