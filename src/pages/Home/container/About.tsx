@@ -13,37 +13,32 @@ const About = () => {
                     </strong>
                     , a Backend & Infrastructure Engineer passionate about{" "}
                     <strong className="text-blue-400">
-                        secure APIs, distributed systems, and automation tools
+                        building scalable systems, real-time applications, and high-performance infrastructure
                     </strong>. 
                     Currently ranked{" "}
                     <strong className="text-blue-400">Top 11.8% in METI Japan IT Contest 2025</strong>.
-                    
+
                     <p>
-                        I work primarily with{" "}
-                        <strong className="text-blue-400">Go, PostgreSQL, and Redis</strong>,
-                        and have hands-on experience in{" "}
-                        <strong className="text-blue-400">
-                            RBAC systems, load balancing, clustering, and orchestration
-                        </strong>. 
-                        At Udyansh, I design ETL pipelines, cron-based data integrations, 
-                        and secure auth systems, while also contributing to infra setups like{" "}
-                        <strong className="text-blue-400">
-                            NAT gateways, firewall automation, and Juju orchestration
-                        </strong>.
+                        At <strong className="text-blue-400">Udyansh</strong>, I built distributed ETL pipelines 
+                        processing 1,000+ events daily from multiple sources using concurrent Go routines. 
+                        I developed secure API key management and RBAC middleware protecting 20+ internal routes, 
+                        and deployed isolated NAT test environments using VirtualBox, iptables, and dnsmasq.
                     </p>
 
                     <p>
-                        Beyond work, I contribute actively to{" "}
+                        I contribute actively to{" "}
                         <strong className="text-blue-400">open source</strong> — 
-                        projects like <strong>Serac</strong> (Rust RBAC Auth), and 
-                        <strong>BalancerX</strong> (Go Load Balancer). 
-                        I also document my learning through{" "}
-                        <strong className="text-blue-400">technical blogs and deployment guides</strong>.
+                        projects like <strong>Serac</strong> (Rust RBAC Auth with Argon2), 
+                        <strong>BalancerX</strong> (Go Load Balancer handling 11-12k req/sec), and 
+                        <strong>debforge</strong> (CLI .deb package builder). 
+                        I also author{" "}
+                        <strong className="text-blue-400">10+ technical documentation guides</strong> 
+                        covering Redis, KeyDB, Juju orchestration, and Linux administration.
                     </p>
 
                     <p>
-                        I enjoy solving backend scaling challenges, designing infra workflows, 
-                        and writing code that is{" "}fast, secure, and well-documented
+                        I enjoy solving complex backend challenges and building infrastructure that is{" "}
+                        fast, secure, and production-ready.
                     </p>
                 </div>
             </div>
