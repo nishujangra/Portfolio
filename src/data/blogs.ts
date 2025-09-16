@@ -197,5 +197,15 @@ export const blogs = [
         url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Install-Apache-CouchDB-on-Debian",
         tags: ["CouchDB", "Database", "Debian", "Installation"],
         category: "Other DevOps & Tools"
+    },
+
+
+    // Deployment
+    {
+        title: "Setting up a Domain Name and Sub-Domain using Nginx on Debian 13",
+        description: "Learn how to set up domain names and sub-domains using Nginx on Debian 13 for web hosting and server configuration.",
+        url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Setup-Domain-Name-Nginx",
+        tags: ["Nginx", "Domain", "Sub-domain", "Debian", "Web Hosting", "Server Configuration"],
+        category: "Deployment"
     }
 ];
