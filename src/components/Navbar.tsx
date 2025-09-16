@@ -8,98 +8,90 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu, Terminal, Home, FolderOpen, FileText, MessageSquare } from "lucide-react";
+import { Menu, Terminal } from "lucide-react";
 
 const NavBar = () => {
     const { pathname } = useLocation();
 
     return (
-        <nav className="flex justify-between items-center px-8 py-4 bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-700">
+        <nav className="flex justify-between items-center px-6 py-3 bg-gray-900/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-800">
             <motion.div
                 className="flex items-center space-x-2"
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.6 }}
             >
-                <Terminal className="text-gold" size={24} />
-                <h1 className="text-xl font-bold text-white">
+                <Terminal className="text-gold" size={20} />
+                <h1 className="text-lg font-mono text-white">
                     <Link to="/" className="hover:text-gold transition-colors">
                         nishant@portfolio:~$
                     </Link>
                 </h1>
             </motion.div>
             
-            <ul className="hidden md:flex space-x-6">
+            <ul className="hidden md:flex space-x-1">
                 <motion.li
-                    className="text-md"
-                    initial={{ opacity: 0, y: -50 }}
+                    initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.25 }}
+                    transition={{ duration: 0.3 }}
                 >
                     <Link
                         to="/"
-                        className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-all duration-200 ${
+                        className={`px-3 py-2 text-sm font-mono transition-colors duration-200 rounded-md ${
                             pathname === "/" 
-                                ? "bg-gold/20 text-gold border border-gold/30" 
-                                : "text-gray-300 hover:text-gold hover:bg-gray-800/50"
+                                ? "text-gold bg-gold/10" 
+                                : "text-gray-400 hover:text-gold hover:bg-gray-800/30"
                         }`}
                     >
-                        <Home size={16} />
-                        <span>/home</span>
+                        /home/nishant
                     </Link>
                 </motion.li>
                 <motion.li
-                    className="text-md"
-                    initial={{ opacity: 0, y: -50 }}
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                >
+                    <Link
+                        to="/projects"
+                        className={`px-3 py-2 text-sm font-mono transition-colors duration-200 rounded-md ${
+                            pathname === "/projects" 
+                                ? "text-gold bg-gold/10" 
+                                : "text-gray-400 hover:text-gold hover:bg-gray-800/30"
+                        }`}
+                    >
+                        ~/projects
+                    </Link>
+                </motion.li>
+                <motion.li
+                    initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
                     <Link
-                        to="/projects"
-                        className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-all duration-200 ${
-                            pathname === "/projects" 
-                                ? "bg-gold/20 text-gold border border-gold/30" 
-                                : "text-gray-300 hover:text-gold hover:bg-gray-800/50"
-                        }`}
-                    >
-                        <FolderOpen size={16} />
-                        <span>~/dev/projects</span>
-                    </Link>
-                </motion.li>
-                <motion.li
-                    className="text-md"
-                    initial={{ opacity: 0, y: -50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.75 }}
-                >
-                    <Link
                         to="/blogs"
-                        className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-all duration-200 ${
+                        className={`px-3 py-2 text-sm font-mono transition-colors duration-200 rounded-md ${
                             pathname === "/blogs" 
-                                ? "bg-gold/20 text-gold border border-gold/30" 
-                                : "text-gray-300 hover:text-gold hover:bg-gray-800/50"
+                                ? "text-gold bg-gold/10" 
+                                : "text-gray-400 hover:text-gold hover:bg-gray-800/30"
                         }`}
                     >
-                        <FileText size={16} />
-                        <span>~/docs/blogs</span>
+                        ~/blogs
                     </Link>
                 </motion.li>
                 <motion.li
-                    className="text-md"
-                    initial={{ opacity: 0, y: -50 }}
+                    initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0.6 }}
                 >
                     <Link
                         to="/contact"
-                        className={`flex items-center space-x-2 px-3 py-2 rounded-md transition-all duration-200 ${
+                        className={`px-3 py-2 text-sm font-mono transition-colors duration-200 rounded-md ${
                             pathname === "/contact" 
-                                ? "bg-gold/20 text-gold border border-gold/30" 
-                                : "text-gray-300 hover:text-gold hover:bg-gray-800/50"
+                                ? "text-gold bg-gold/10" 
+                                : "text-gray-400 hover:text-gold hover:bg-gray-800/30"
                         }`}
                     >
-                        <MessageSquare size={16} />
-                        <span>~/contact</span>
+                        ~/contact
                     </Link>
                 </motion.li>
             </ul>
@@ -109,77 +101,54 @@ const NavBar = () => {
                     <SheetTrigger>
                         <Menu size={24} className="text-white cursor-pointer hover:text-gold transition-colors" />
                     </SheetTrigger>
-                    <SheetContent className="bg-gray-900 border-l border-gray-700">
+                    <SheetContent className="bg-gray-900 border-l border-gray-800">
                         <SheetHeader>
-                            <SheetTitle className="text-gold flex items-center space-x-2">
-                                <Terminal size={20} />
+                            <SheetTitle className="text-gold flex items-center space-x-2 font-mono">
+                                <Terminal size={18} />
                                 <span>nishant@portfolio:~$</span>
                             </SheetTitle>
                             <SheetDescription className="text-gray-400">
-                                <div className="flex flex-col justify-between h-[80vh] mt-6">
-                                    <ul className="flex flex-col space-y-2">
-                                        <li>
-                                            <Link
-                                                to="/"
-                                                className={`flex items-center space-x-3 px-3 py-2 rounded-md transition-all duration-200 ${
-                                                    pathname === "/" 
-                                                        ? "bg-gold/20 text-gold border border-gold/30" 
-                                                        : "text-gray-300 hover:text-gold hover:bg-gray-800/50"
-                                                }`}
-                                            >
-                                                <Home size={16} />
-                                                <span>/home</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                to="/projects"
-                                                className={`flex items-center space-x-3 px-3 py-2 rounded-md transition-all duration-200 ${
-                                                    pathname === "/projects" 
-                                                        ? "bg-gold/20 text-gold border border-gold/30" 
-                                                        : "text-gray-300 hover:text-gold hover:bg-gray-800/50"
-                                                }`}
-                                            >
-                                                <FolderOpen size={16} />
-                                                <span>~/dev/projects</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                to="/blogs"
-                                                className={`flex items-center space-x-3 px-3 py-2 rounded-md transition-all duration-200 ${
-                                                    pathname === "/blogs" 
-                                                        ? "bg-gold/20 text-gold border border-gold/30" 
-                                                        : "text-gray-300 hover:text-gold hover:bg-gray-800/50"
-                                                }`}
-                                            >
-                                                <FileText size={16} />
-                                                <span>~/docs/blogs</span>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link
-                                                to="/contact"
-                                                className={`flex items-center space-x-3 px-3 py-2 rounded-md transition-all duration-200 ${
-                                                    pathname === "/contact" 
-                                                        ? "bg-gold/20 text-gold border border-gold/30" 
-                                                        : "text-gray-300 hover:text-gold hover:bg-gray-800/50"
-                                                }`}
-                                            >
-                                                <MessageSquare size={16} />
-                                                <span>~/contact</span>
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                    <div className="text-gray-500 text-xs border-t border-gray-700 pt-4">
-                                        <div className="flex items-center space-x-2 mb-2">
-                                            <Terminal size={12} />
-                                            <span>© 2025 Nishant Jangra</span>
-                                        </div>
-                                        <div className="text-gray-600">
-                                            Built with React & TypeScript
-                                        </div>
-                                    </div>
+                                <div className="flex flex-col space-y-2 mt-6">
+                                    <Link
+                                        to="/"
+                                        className={`px-3 py-2 text-sm font-mono transition-colors duration-200 rounded-md ${
+                                            pathname === "/" 
+                                                ? "text-gold bg-gold/10" 
+                                                : "text-gray-400 hover:text-gold hover:bg-gray-800/30"
+                                        }`}
+                                    >
+                                        /home
+                                    </Link>
+                                    <Link
+                                        to="/projects"
+                                        className={`px-3 py-2 text-sm font-mono transition-colors duration-200 rounded-md ${
+                                            pathname === "/projects" 
+                                                ? "text-gold bg-gold/10" 
+                                                : "text-gray-400 hover:text-gold hover:bg-gray-800/30"
+                                        }`}
+                                    >
+                                        ~/projects
+                                    </Link>
+                                    <Link
+                                        to="/blogs"
+                                        className={`px-3 py-2 text-sm font-mono transition-colors duration-200 rounded-md ${
+                                            pathname === "/blogs" 
+                                                ? "text-gold bg-gold/10" 
+                                                : "text-gray-400 hover:text-gold hover:bg-gray-800/30"
+                                        }`}
+                                    >
+                                        ~/blogs
+                                    </Link>
+                                    <Link
+                                        to="/contact"
+                                        className={`px-3 py-2 text-sm font-mono transition-colors duration-200 rounded-md ${
+                                            pathname === "/contact" 
+                                                ? "text-gold bg-gold/10" 
+                                                : "text-gray-400 hover:text-gold hover:bg-gray-800/30"
+                                        }`}
+                                    >
+                                        ~/contact
+                                    </Link>
                                 </div>
                             </SheetDescription>
                         </SheetHeader>
