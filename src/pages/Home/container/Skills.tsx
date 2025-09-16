@@ -14,9 +14,9 @@ const Skills = () => {
                         Languages
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {["Go", "C++", "Python", "TypeScript", "Perl", "JavaScript"].map((skill, index) => (
+                        {["Go", "Rust", "C++", "Python", "TypeScript", "Perl", "JavaScript", "Bash"].map((skill, index) => (
                             <span key={index} className={`px-3 py-1 rounded-full text-sm font-medium border ${
-                                skill === "Go" || skill === "C++" || skill === "Python" 
+                                skill === "Go" || skill === "Rust" || skill === "C++" 
                                     ? "bg-blue-600/30 text-blue-200 border-blue-500/50" 
                                     : "bg-blue-600/20 text-blue-300 border-blue-600/30"
                             }`}>
@@ -38,7 +38,7 @@ const Skills = () => {
                         Backend/Infra
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {["REST APIs", "Echo", "RBAC", "OAuth 2.0", "JWT", "Express.js"].map((skill, index) => (
+                        {["REST APIs", "WebSockets", "RBAC", "OAuth 2.0", "JWT", "Argon2", "ETL Pipelines", "Load Balancing"].map((skill, index) => (
                             <span key={index} className="bg-green-600/30 text-green-200 px-3 py-1 rounded-full text-sm font-medium border border-green-500/50">
                                 {skill}
                             </span>
@@ -55,7 +55,7 @@ const Skills = () => {
                         Databases & Caching
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {["PostgreSQL", "MongoDB", "CouchDB", "MySQL", "Redis"].map((skill, index) => (
+                        {["PostgreSQL", "Redis", "MongoDB", "CouchDB", "MySQL", "KeyDB", "Clustering", "Replication"].map((skill, index) => (
                             <span key={index} className="bg-yellow-600/30 text-yellow-200 px-3 py-1 rounded-full text-sm font-medium border border-yellow-500/50">
                                 {skill}
                             </span>
@@ -72,7 +72,7 @@ const Skills = () => {
                         Systems/Networking
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {["Linux", "iptables", "NAT", "dnsmasq", "tcpdump", "Shorewall", "Shell", "Cron"].map((skill, index) => (
+                        {["Linux", "iptables", "NAT", "dnsmasq", "tcpdump", "Shorewall", "Shell", "Cron", "VirtualBox", "Debian/Devuan"].map((skill, index) => (
                             <span key={index} className="bg-indigo-600/30 text-indigo-200 px-3 py-1 rounded-full text-sm font-medium border border-indigo-500/50">
                                 {skill}
                             </span>
@@ -89,7 +89,7 @@ const Skills = () => {
                         DevOps/Tools
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {["Git", "GitHub", "Bitbucket", "Ansible", "VirtualBox", "cURL", "Postman", "VS Code"].map((skill, index) => (
+                        {["Juju", "Ansible", "Git", "GitHub", "Bitbucket", "cURL", "Postman", "VS Code", "Docker", "Nginx"].map((skill, index) => (
                             <span key={index} className="bg-red-600/30 text-red-200 px-3 py-1 rounded-full text-sm font-medium border border-red-500/50">
                                 {skill}
                             </span>
@@ -106,7 +106,7 @@ const Skills = () => {
                         Cloud & Deployment
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {["Docker", "Nginx"].map((skill, index) => (
+                        {["Docker", "Nginx", "Domain Setup", "SSL/TLS", "Load Balancing", "Microservices", "Distributed Systems"].map((skill, index) => (
                             <span key={index} className="bg-teal-600/30 text-teal-200 px-3 py-1 rounded-full text-sm font-medium border border-teal-500/50">
                                 {skill}
                             </span>
@@ -114,22 +114,22 @@ const Skills = () => {
                     </div>
                 </div>
 
-                {/* Currently Exploring */}
-                <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 hover:bg-gray-800/70 transition-colors duration-200">
+                {/* System Programming & Performance */}
+                {/* <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 hover:bg-gray-800/70 transition-colors duration-200">
                     <h3 className="text-lg font-semibold text-gold mb-4 flex items-center">
                         <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                             <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
                         </svg>
-                        Currently Exploring
+                        System Programming
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {["Rocket (Rust)", "Juju"].map((skill, index) => (
+                        {["Rocket.rs", "Performance Optimization", "Concurrent Programming", "Memory Management", "CLI Tools", "Load Balancers"].map((skill, index) => (
                             <span key={index} className="bg-pink-600/30 text-pink-200 px-3 py-1 rounded-full text-sm font-medium border border-pink-500/50">
                                 {skill}
                             </span>
                         ))}
                     </div>
-                </div>
+                </div> */}
 
                 {/* CS Fundamentals */}
                 <div className="bg-gray-800/50 rounded-lg p-6 border border-gray-700 hover:bg-gray-800/70 transition-colors duration-200">
@@ -140,7 +140,7 @@ const Skills = () => {
                         CS Fundamentals
                     </h3>
                     <div className="flex flex-wrap gap-2">
-                        {["DSA (600+ problems)", "OS", "DBMS", "Networking", "OOP"].map((skill, index) => (
+                        {["DSA (600+ problems)", "OS", "DBMS", "Networking", "OOP", "System Design", "Algorithms"].map((skill, index) => (
                             <span key={index} className="bg-orange-600/30 text-orange-200 px-3 py-1 rounded-full text-sm font-medium border border-orange-500/50">
                                 {skill}
                             </span>
