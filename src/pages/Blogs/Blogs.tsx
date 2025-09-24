@@ -1,7 +1,10 @@
 import { blogs } from "@/data/blogs";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Blogs = () => {
+    const [selectedCategory, setSelectedCategory] = useState("All");
+    
     const groupedBlogs = blogs.reduce((acc, blog) => {
         const category = blog.category || "Other";
         if (!acc[category]) {
@@ -11,75 +14,91 @@ const Blogs = () => {
         return acc;
     }, {} as Record<string, typeof blogs>);
 
+    const categories = ["All", ...Object.keys(groupedBlogs)];
+    
+    const filteredBlogs = selectedCategory === "All" 
+        ? groupedBlogs 
+        : { [selectedCategory]: groupedBlogs[selectedCategory] || [] };
+
     return (
-        <main className="p-6 bg-[#111827] min-h-screen">
-            <div className="flex flex-col justify-center items-center min-h-[80vh]">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 rounded-lg shadow-lg p-8 border border-gray-700 bg-gray-800/50 backdrop-blur-sm">
-                    <h1 className="text-3xl font-extrabold text-center mb-8">
-                        Blog Posts
-                    </h1>
-                    <p className="text-center mb-8 max-w-2xl mx-auto text-gray-300">
+        <main className="w-full h-full py-8 md:p-0">
+            <div className="max-w-6xl mx-auto px-6 py-8">
+                <div className="text-center mb-8">
+                    <h1 className="text-3xl font-bold text-white mb-4">Technical Documentation</h1>
+                    <p className="text-gray-400 text-lg mb-6">
                         A collection of technical articles covering Linux administration, DevOps practices, 
                         database management, and software development.
                     </p>
                     
-                    <div className="space-y-12">
-                        {Object.entries(groupedBlogs).map(([category, categoryBlogs]) => (
-                            <div key={category} className="pb-6 border-b border-gray-700 last:border-b-0">
-                                <h2 className="text-2xl font-bold mb-6 text-gray-100">
+                    {/* Category Filter */}
+                    <div className="flex justify-center">
+                        <select
+                            value={selectedCategory}
+                            onChange={(e) => setSelectedCategory(e.target.value)}
+                            className="bg-gray-800 border border-gray-600 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent"
+                        >
+                            {categories.map((category) => (
+                                <option key={category} value={category} className="bg-gray-800">
                                     {category}
-                                </h2>
-                                <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                                    {categoryBlogs.map((blog, index) => (
-                                        <div 
-                                            key={index} 
-                                            className="bg-gray-900/50 rounded-lg p-5 hover:bg-gray-800/70 transition-colors duration-200 border border-gray-700 h-full flex flex-col"
-                                        >
-                                            <Link
-                                                to={blog.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex flex-col h-full"
-                                            >
-                                                <h3 className="text-lg font-semibold mb-2 line-clamp-2 group-hover:text-white transition-colors duration-200">
-                                                    {blog.title}
-                                                </h3>
-                                                <p className="text-gray-300 text-sm mb-3 line-clamp-3">
-                                                    {blog.description}
-                                                </p>
-                                                {blog.tags && (
-                                                    <div className="flex flex-wrap gap-1 mb-4">
-                                                        {blog.tags.map((tag, tagIndex) => (
-                                                            <span
-                                                                key={tagIndex}
-                                                                className="inline-block bg-gray-700/50 text-gray-200 text-xs px-2 py-1 rounded-full font-medium border border-gray-600"
-                                                            >
-                                                                {tag}
-                                                            </span>
-                                                        ))}
-                                                    </div>
-                                                )}
-                                                <div className="flex items-center text-xs text-gray-400 mt-auto">
-                                                    <span className="inline-flex items-center">
-                                                        <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                                            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                                                        </svg>
-                                                        Read Article
-                                                    </span>
-                                                </div>
-                                            </Link>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
+                                </option>
+                            ))}
+                        </select>
                     </div>
+                </div>
                     
-                    <div className="mt-8 text-center">
-                        <p className="text-gray-400 text-sm">
-                            Total: {blogs.length} articles
-                        </p>
-                    </div>
+                <div className="space-y-8">
+                    {Object.entries(filteredBlogs).map(([category, categoryBlogs]) => (
+                        <div key={category} className="bg-gray-800/50 p-6 rounded-lg shadow-lg border border-gray-700">
+                            <h2 className="text-xl font-bold mb-6 text-gold">
+                                {category}
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                {categoryBlogs.map((blog, index) => (
+                                    <div key={index} className="bg-gray-900/50 p-4 rounded-lg border border-gray-700 hover:bg-gray-800/70 transition-colors duration-200">
+                                        <Link
+                                            to={blog.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="block h-full"
+                                        >
+                                            <h3 className="text-lg font-semibold text-white hover:text-gold transition-colors duration-200 mb-2 line-clamp-2">
+                                                {blog.title}
+                                            </h3>
+                                            <p className="text-gray-300 text-sm mb-3 line-clamp-3">
+                                                {blog.description}
+                                            </p>
+                                            {blog.tags && (
+                                                <div className="flex flex-wrap gap-1">
+                                                    {blog.tags.slice(0, 3).map((tag, tagIndex) => (
+                                                        <span
+                                                            key={tagIndex}
+                                                            className="text-xs px-2 py-1 bg-gray-700/50 text-gray-300 rounded"
+                                                        >
+                                                            {tag}
+                                                        </span>
+                                                    ))}
+                                                    {blog.tags.length > 3 && (
+                                                        <span className="text-xs text-gray-400">
+                                                            +{blog.tags.length - 3} more
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            )}
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                
+                <div className="mt-8 text-center">
+                    <p className="text-gray-400 text-sm">
+                        {selectedCategory === "All" 
+                            ? `Total: ${blogs.length} articles` 
+                            : `${filteredBlogs[selectedCategory]?.length || 0} articles in ${selectedCategory}`
+                        }
+                    </p>
                 </div>
             </div>
         </main>
