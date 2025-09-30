@@ -8,6 +8,13 @@ export const blogs = [
         category: "Programming & Development"
     },
     {
+        title: "How to Use Tera Templates with Axum in Rust",
+        description: "A step-by-step guide to integrating Tera templates with the Axum web framework in Rust. Learn how to set up the project, configure Tera, render dynamic HTML, and run your server.",
+        url: "https://nishujangra27.hashnode.dev/tera-templates-axum-rust",
+        tags: ["Rust", "Axum", "Tera Templates", "Web Development", "Backend Programming"],
+        category: "Programming & Development"
+    },
+    {
         title: "Why Rust Forces Immutability?",
         description: "A beginner-friendly explanation of Rust's immutability, how it ensures memory safety, prevents race conditions, and when to use mutable variables with the `mut` keyword.",
         url: "https://medium.com/@nishujangra27/why-rust-forces-immutability-04e40cbf2e46",
