@@ -84,6 +84,14 @@ export const blogs = [
 
     // Networking & Infrastructure
     {
+        title: "Creating a Virtual Network in VirtualBox (Linux Host)",
+        description: "A detailed guide to creating a custom host-only virtual network in VirtualBox on Linux using a 172.16.0.0/24 subnet. Includes steps for manual IP assignment, DHCP configuration, and attaching the network to virtual machines.",
+        url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Virtual-Network-VirtualBox",
+        tags: ["VirtualBox", "Networking", "Linux", "Host-only Network", "Virtualization"],
+        category: "Networking & Infrastructure"
+    },
+
+    {
         title: "How to Set Up a Virtual Gateway with NAT in VirtualBox",
         description: "Detailed instructions to configure a virtual NAT gateway in VirtualBox to enable internet access for VMs.",
         url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Setting-Up-a-Virtual-Gateway-with-NAT-in-VirtualBox",
