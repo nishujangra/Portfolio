@@ -115,6 +115,13 @@ export const blogs = [
         category: "Juju & DevOps"
     },
     {
+        title: "Granting Permissions to a PostgreSQL User",
+        description: "A short guide on creating a PostgreSQL user and granting database privileges securely.",
+        url: "https://medium.com/@nishujangra27/granting-permissions-to-a-postgresql-user-4768f923f96e",
+        tags: ["PostgreSQL", "DatabaseSecurity", "SQL", "DevOps", "AccessControl"],
+        category: "Juju & DevOps"
+    },
+    {
         title: "Juju: PostgreSQL Clustering & Replication",
         description: "A step-by-step guide to scale PostgreSQL on Juju by adding multiple units, setting passwords, and verifying replication across the cluster.",
         url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Juju-PostgreSQL-Clustering",
