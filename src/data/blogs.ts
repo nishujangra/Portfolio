@@ -229,5 +229,15 @@ export const blogs = [
         url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Setup-Domain-Name-Nginx",
         tags: ["Nginx", "Domain", "Sub-domain", "Debian", "Web Hosting", "Server Configuration"],
         category: "Deployment"
+    },
+
+    // Virtualization & Hypervisors
+    {
+        title: "How to Fix 'VT-x is Being Used by Another Hypervisor' Error in VirtualBox (Linux)",
+        description: "A step-by-step guide to resolving the 'VT-x is being used by another hypervisor (VERR_VMX_IN_VMX_ROOT_MODE)' error in VirtualBox on Linux. Learn how to disable KVM/QEMU, stop conflicting services, and reload VirtualBox kernel modules to fix hardware virtualization conflicts.",
+        url: "https://medium.com/@nishujangra27/how-to-fix-vt-x-is-being-used-by-another-hypervisor-error-in-virtualbox-linux-2a6d35e57075",
+        tags: ["VirtualBox", "Linux", "KVM", "Virtualization", "Troubleshooting"],
+        category: "Virtualization & Hypervisors"
     }
+
 ];
