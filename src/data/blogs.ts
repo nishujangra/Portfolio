@@ -82,6 +82,17 @@ export const blogs = [
     },
 
 
+    // eBPF & Kernel Programming
+    {
+        title: "Getting Started with eBPF and XDP: A Simple Hello World in Ubuntu",
+        description: "Learn what eBPF and XDP are, why they’re so powerful in Linux networking, and how to write, compile, and attach your first XDP Hello World program in Ubuntu.",
+        url: "https://medium.com/@nishujangra27/getting-started-with-ebpf-and-xdp-a-simple-hello-world-in-ubuntu-c0e94e29221a", 
+        tags: ["eBPF", "XDP", "Linux", "Networking", "Kernel Programming", "Ubuntu"],
+        category: "eBPF & Kernel Programming"
+    },
+
+
+
     // Networking & Infrastructure
     {
         title: "Creating a Virtual Network in VirtualBox (Linux Host)",
