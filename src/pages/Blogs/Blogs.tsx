@@ -1,116 +1,112 @@
-import { blogs } from "@/data/blogs";
-import { Link } from "react-router-dom";
 import { useState } from "react";
+import BlogCard from "./components/BlogCard";
+import { blogs as blogCategories } from "../../data/blogs";
 
-const Blogs = () => {
-    const [selectedCategory, setSelectedCategory] = useState("All");
-    
-    const groupedBlogs = blogs.reduce((acc, blog) => {
-        const category = blog.category || "Other";
-        if (!acc[category]) {
-            acc[category] = [];
-        }
-        acc[category].push(blog);
-        return acc;
-    }, {} as Record<string, typeof blogs>);
+const Blog = () => {
+	const [selectedCategory, setSelectedCategory] = useState<string>("All");
+	const [searchQuery, setSearchQuery] = useState<string>("");
 
-    const categories = ["All", ...Object.keys(groupedBlogs)];
-    
-    const filteredBlogs = selectedCategory === "All" 
-        ? groupedBlogs 
-        : { [selectedCategory]: groupedBlogs[selectedCategory] || [] };
+	// Flatten all blogs with category info
+	const allBlogs = blogCategories.flatMap((category) =>
+		category.blogs.map((blog) => ({ ...blog, category: category.title }))
+	);
 
-    return (
-        <main className="w-full h-full py-8 md:p-0">
-            <div className="max-w-6xl mx-auto px-6 py-8">
-                <div className="text-center mb-8">
-                    <h1 className="text-3xl font-bold text-white mb-4">Technical Documentation</h1>
-                    <p className="text-gray-400 text-lg mb-6">
-                        A collection of technical articles covering Linux administration, DevOps practices, 
-                        database management, and software development.
-                    </p>
-                    
-                    {/* Category Filter */}
-                    <div className="flex justify-center">
-                        <select
-                            value={selectedCategory}
-                            onChange={(e) => setSelectedCategory(e.target.value)}
-                            className="bg-slate-800/50 border border-slate-600/50 text-slate-100 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400 focus:border-transparent hover:bg-slate-700/50 transition-colors duration-200"
-                        >
-                            {categories.map((category) => (
-                                <option key={category} value={category} className="bg-slate-800">
-                                    {category}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                </div>
-                    
-                <div className="space-y-8">
-                    {Object.entries(filteredBlogs).map(([category, categoryBlogs], index) => (
-                        <>
-                        <div key={category} className="p-6 rounded-lg shadow-lg">
-                            <h2 className="text-xl font-bold mb-6 text-slate-200">
-                                {category}
-                            </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                                {categoryBlogs.map((blog, index) => (
-                                    <div key={index} className="bg-slate-700/30 p-4 rounded-lg border border-slate-600/30 hover:bg-slate-600/40 transition-colors duration-200">
-                                        <Link
-                                            to={blog.url}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="block h-full"
-                                        >
-                                            <h3 className="text-lg font-semibold text-slate-100 hover:text-white transition-colors duration-200 mb-2 line-clamp-2">
-                                                {blog.title}
-                                            </h3>
-                                            <p className="text-slate-300 text-sm mb-3 line-clamp-3">
-                                                {blog.description}
-                                            </p>
-                                            {blog.tags && (
-                                                <div className="flex flex-wrap gap-1">
-                                                    {blog.tags.slice(0, 3).map((tag, tagIndex) => (
-                                                        <span
-                                                            key={tagIndex}
-                                                            className="text-xs px-2 py-1 bg-slate-600/40 text-slate-200 rounded border border-slate-500/30"
-                                                        >
-                                                            {tag}
-                                                        </span>
-                                                    ))}
-                                                    {blog.tags.length > 3 && (
-                                                        <span className="text-xs text-slate-400">
-                                                            +{blog.tags.length - 3} more
-                                                        </span>
-                                                    )}
-                                                </div>
-                                            )}
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+	// Filter by category
+	let filteredBlogs =
+		selectedCategory === "All"
+			? allBlogs
+			: allBlogs.filter((blog) => blog.category === selectedCategory);
 
-                        {index !== Object.entries(filteredBlogs).length - 1 && (
-                            <div className="flex justify-center my-8">
-                                <div className="w-96 h-px bg-gradient-to-r from-transparent via-slate-500 to-transparent"></div>
-                            </div>
-                        )}
-                        </>
-                    ))}
-                </div>
-                
-                <div className="mt-8 text-center">
-                    <p className="text-slate-400 text-sm">
-                        {selectedCategory === "All" 
-                            ? `Total: ${blogs.length} articles` 
-                            : `${filteredBlogs[selectedCategory]?.length || 0} articles in ${selectedCategory}`
-                        }
-                    </p>
-                </div>
-            </div>
-        </main>
-    );
+	// Search filter (title, tags, description)
+	if (searchQuery.trim() !== "") {
+		const q = searchQuery.toLowerCase();
+		filteredBlogs = filteredBlogs.filter((blog) => {
+			return (
+				blog.title.toLowerCase().includes(q) ||
+				blog.description.toLowerCase().includes(q) ||
+				blog.tags.some((tag) => tag.toLowerCase().includes(q))
+			);
+		});
+	}
+
+	return (
+		<div className="relative min-h-screen w-full overflow-hidden bg-space-950 font-mono text-text-primary">
+			<div className="relative z-10 mx-auto px-6 py-12 md:px-12 lg:px-24 lg:py-20">
+
+				{/* Header */}
+				<header className="mb-10 max-w-3xl space-y-4">
+					<p className="text-xs tracking-[0.35em] text-cyber-400/70">
+						[ BLOG FEED ]
+					</p>
+					<h1 className="text-3xl md:text-4xl font-black tracking-wider text-electric-400">
+						DIGITAL LOGS & WRITE-UPS
+					</h1>
+					<p className="text-sm md:text-base text-text-primary/80">
+						A collection of backend, systems, and Rust notes—from authentication to infrastructure tooling.
+					</p>
+				</header>
+
+				{/* Search Box */}
+				<div className="mb-6">
+					<input
+						type="text"
+						placeholder="Search blogs by title, tag, or topic..."
+						value={searchQuery}
+						onChange={(e) => setSearchQuery(e.target.value)}
+						className="
+							w-full rounded-md bg-space-800 
+							border border-border-muted 
+							p-3 text-sm text-text-primary 
+							placeholder-text-muted 
+							focus:border-cyber-500 focus:outline-none 
+							transition
+						"
+					/>
+				</div>
+
+				{/* Category Filter */}
+				<div className="mb-8 flex flex-wrap gap-3">
+					<button
+						className={`px-3 py-1 rounded-md text-sm font-medium transition cursor-pointer ${
+							selectedCategory === "All"
+								? "bg-cyber-500 text-black"
+								: "bg-space-800 text-text-secondary border border-border-muted hover:bg-space-700"
+						}`}
+						onClick={() => setSelectedCategory("All")}
+					>
+						All
+					</button>
+
+					{blogCategories.map((cat) => (
+						<button
+							key={cat.title}
+							className={`px-3 py-1 rounded-md text-sm font-medium transition cursor-pointer ${
+								selectedCategory === cat.title
+									? "bg-cyber-500 text-black"
+									: "bg-space-800 text-text-secondary border border-border-muted hover:bg-space-700"
+							}`}
+							onClick={() => setSelectedCategory(cat.title)}
+						>
+							{cat.title}
+						</button>
+					))}
+				</div>
+
+				{/* Blogs Grid */}
+				<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+					{filteredBlogs.map((blog) => (
+						<BlogCard key={blog.title} blog={blog} />
+					))}
+
+					{filteredBlogs.length === 0 && (
+						<p className="text-text-secondary col-span-full text-center mt-8">
+							No posts match your search.
+						</p>
+					)}
+				</div>
+			</div>
+		</div>
+	);
 };
 
-export default Blogs;
+export default Blog;

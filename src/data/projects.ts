@@ -1,109 +1,126 @@
-const projects = [
-  {
-    id: 0,
-    title: "Serac - Rust RBAC Auth System",
-    desc: "Built a lightweight JWT authentication system in Rust using the Rocket.rs framework. Implemented Argon2 password hashing, secure cookie-based session handling, and structured User, Register, and Login flows. Used sqlx for async PostgreSQL queries and deployed full auth flow with minimal dependencies to serve as a boilerplate for secure Rust APIs.",
-    tags: ["Rust", "Rocket.rs", "PostgreSQL", "JWT", "Argon2", "Authentication", "Security", "RBAC"],
-    demoLink: "",
-    githubLink: "https://github.com/nishujangra/serac",
-  },
-  {
-    id: 1,
-    title: "BalancerX - Lightweight Load Balancer",
-    desc: "Developed a production-grade load balancer in Go with support for HTTP and TCP protocols, active health checks, and logging. Implemented round-robin and random strategies, configurable via clean config.yaml file. Sustained ~11-12.5k req/sec with 4-16ms average latency under 200 concurrent clients, processing hundreds of thousands of requests with zero errors.",
-    tags: ["Go", "Load Balancing", "HTTP", "TCP", "High Performance", "System Programming", "Production"],
-    demoLink: "",
-    githubLink: "https://github.com/nishujangra/balancerx",
-  },
-  {
-    id: 2,
-    title: "debforge - General .deb Package Builder",
-    desc: "Built a lightweight CLI tool to forge .deb packages quickly from binaries. Automates control file, directory structure, and post-install script generation. Distributed as a .deb itself, demonstrating self-hosting capability. Future roadmap includes publishing via GitHub-hosted APT repository for apt install debforge.",
-    tags: ["Bash", "CLI", "Debian", "Package Management", "Automation", "Linux", "DevOps", "Self-hosting"],
-    demoLink: "",
-    githubLink: "https://github.com/nishujangra/debforge",
-  },
-  {
-    id: 3,
-    title: "Intuit Go SDK",
-    desc: "An open-source Golang SDK for QuickBooks Payments API enabling secure charge management, refunds, and OAuth 2.0-based integrations.",
-    tags: ["Go", "SDK", "QuickBooks API", "OAuth 2.0", "Payments", "REST API", "Open Source"],
-    demoLink: "",
-    githubLink: "https://github.com/nishujangra/intuit-go",
-  },
-  {
-    id: 4,
-    title: "Firewall Management System - Web UI for Shorewall",
-    desc: "Developed a web-based firewall management interface using Mojolicious (Perl) with CouchDB-based authentication. Supported live control of Shorewall rules, automated backups, and user login via secure endpoints. Added diagnostics tools (ping, traceroute, tcpdump) for real-time infra observability across 15-20 node networks. Built as a team of 2 at Udyansh.",
-    tags: ["Perl", "Mojolicious", "CouchDB", "Linux", "Shorewall", "Network Security", "Real-time Monitoring", "System Administration"],
-    demoLink: "",
-    githubLink: "https://bitbucket.org/tirveni/fireshorewall/src/master/"
-  },
-  {
-    id: 5,
-    title: "EagleOwl - Role-Based Book Management System",
-    desc: "Created a full-stack Go web app with Google OAuth, password login, and JWT-based sessions. Designed and implemented a robust RBAC system with 3 roles (admin, editor, and reader) and 20+ protected routes. Integrated a Redis-backed async email worker for welcome/signup notifications with sub-second delivery. Built at Udyansh.",
-    tags: ["Go", "PostgreSQL", "Redis", "Google OAuth", "RBAC", "Book Management", "Authentication", "JWT"],
-    demoLink: "",
-    githubLink: "https://bitbucket.org/tirveni/eagleowl/src/master/",
-  },
-  {
-    id: 6,
-    title: "Social Feed",
-    desc: "A simple social feed backend using GraphQL and gRPC that returns the latest posts from followed users with mock data.",
-    tags: ["Go", "GraphQL", "gRPC", "Social Media", "Backend", "API Design"],
-    demoLink: "",
-    githubLink: "https://github.com/nishujangra/social-feed",
-  },
-  {
-    id: 7,
-    title: "Sharp Edit APIs",
-    desc: "A Node.js REST API for real-time image upload and transformations using the Sharp library.",
-    tags: ["Node.js", "Express", "MongoDB", "Sharp", "Image Processing", "REST API", "Real-time"],
-    demoLink: "",
-    githubLink: "https://github.com/nishujangra/sharp-edit",
-  },
-  {
-    id: 8,
-    title: "Weather Go Library",
-    desc: "A Go library that fetches real-time weather data using the OpenWeatherMap API, with a simple interface for developer use.",
-    tags: ["Go", "Library", "OpenWeatherMap API", "Real-time Data", "HTTP Client"],
-    demoLink: "",
-    githubLink: "https://github.com/nishujangra/weather-library",
-  },
-  {
-    id: 9,
-    title: "Cipher Chest",
-    desc: "A simple, secure password manager that stores encrypted passwords in your browser's local storage, with an easy-to-use interface.",
-    tags: ["Vite", "React", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "Password Manager", "Encryption", "Local Storage"],
-    demoLink: "",
-    githubLink: "https://github.com/nishujangra/cipher-chest",
-  },
-  {
-    id: 10,
-    title: "HunterXPokemon - Treasure Hunt Game",
-    desc: "A treasure hunt game where you have to find the hidden pokemons in the map and catch them all to win the game.",
-    tags: ["Node.js", "MongoDB", "JavaScript", "HTML5", "CSS3", "Game Development", "Full Stack"],
-    demoLink: "",
-    githubLink: "https://github.com/nishujangra/pokemonXHunter",
-  },
-  {
-    id: 11,
-    title: "Keeper - React App",
-    desc: "Keeper-React-App is a note-taking app built with React, featuring an intuitive interface for creating, editing, and deleting notes.",
-    tags: ["React", "JavaScript", "HTML5", "CSS3", "Note Taking", "Frontend", "CRUD Operations"],
-    demoLink: "",
-    githubLink: "https://github.com/nishujangra/Keeper-React-App",
-  },
-  {
-    id: 12,
-    title: "Love Calculator",
-    desc: "A fun web app that calculates compatibility between two names using ASCII value math. Developed on Valenntines for friends who want to check their compatibility",
-    tags: ["Python", "Web App", "Flask", "ASCII", "Fun Project", "Deployed"],
-    demoLink: "http://nishujangra27.pythonanywhere.com/",
-    githubLink: "https://github.com/nishujangra/Love-Calculator",
-  },
+export interface Project {
+  name: string;
+  tech: string[];
+  workplace?: string;
+  bitbucket?: string;
+  github?: string;
+  blog?: string;
+  website?: string;
+  description: string[];
+  selected?: boolean;
+  progress: "completed" | "ongoing" | "planned";
+}
+
+export const projects: Project[] = [
+	{
+		name: "Firewall Management System",
+		tech: ["Perl", "Mojolicious", "CouchDB", "Shorewall", "Devuan/Linux"],
+		workplace: "Built at Udyansh (Team of 2)",
+		bitbucket: "https://bitbucket.org/tirveni/fireshorewall/src/master/",
+		description: [
+			"Web-based firewall management interface with CouchDB authentication.",
+			"Supports live control of Shorewall rules, automated backups, and secure user login.",
+			"Added diagnostics tools (ping, traceroute, tcpdump) for real-time infra observability across 15–20 nodes.",
+		],
+		selected: true,
+		progress: "completed",
+	},
+	{
+		name: "EagleOwl",
+		tech: [
+			"Go",
+			"PostgreSQL",
+			"Redis",
+			"TailwindCSS",
+			"Google OAuth 2.0",
+			"RBAC",
+		],
+		workplace: "Built at Udyansh",
+		bitbucket: "https://bitbucket.org/tirveni/eagleowl/src/master/",
+		description: [
+			"Full-stack Go web app with Google OAuth, password login, and JWT-based sessions.",
+			"Implemented RBAC with 3 roles (admin, editor, reader) and 20+ protected routes.",
+			"Redis-backed async email worker for welcome/signup notifications.",
+		],
+		selected: false,
+		progress: "completed",
+	},
+	{
+		name: "Serac",
+		tech: ["Rust", "Rocket.rs", "PostgreSQL", "Argon2", "JWT"],
+		github: "https://github.com/nishujangra/serac",
+		blog: "https://nishujangra27.hashnode.dev/implementing-jwt-authentication-in-rocketrs",
+		description: [
+			"Built a lightweight JWT authentication system in Rust using Rocket.rs framework.",
+			"Implemented Argon2 password hashing, secure cookie-based sessions, and structured User/Register/Login flows.",
+			"Followed modular architecture with clear separation of models, routes, and utility functions.",
+			"Used sqlx for async PostgreSQL queries (email validation, password verification, token storage).",
+			"Deployed full auth flow as boilerplate for secure Rust APIs.",
+		],
+		selected: false,
+		progress: "ongoing",
+	},
+	{
+		name: "BalancerX",
+		tech: ["Go", "HTTP/TCP", "Proxy", "Health Check", "Config-driven"],
+		github: "https://github.com/nishujangra/balancerx",
+		description: [
+			"Production-grade load balancer with HTTP and TCP support, active health checks, and logging.",
+			"Implemented round-robin and random strategies, configurable via config.yaml.",
+			"Handles 11-12.5k req/sec with 4-16ms latency under 200 concurrent clients.",
+			"Stable under 500-2000 clients, processing ~647k-727k requests in 60s.",
+		],
+		selected: true,
+		progress: "completed",
+	},
+	{
+		name: "debforge",
+		tech: ["Bash", "Debian Packaging", "dpkg-deb"],
+		github: "https://github.com/nishujangra/debforge?utm_source=chatgpt.com",
+		description: [
+			"CLI tool to quickly forge .deb packages from binaries.",
+			"Automates control files, directory structure, and post-install script generation.",
+			"Distributed as a .deb itself, demonstrating self-hosting capability.",
+			"Future roadmap: publish via GitHub-hosted APT repository.",
+		],
+		selected: false,
+		progress: "completed",
+	},
+	{
+		name: "Love Calculator",
+		tech: [
+			"Python",
+			"Flask",
+			"Web App",
+			"ASCII",
+			"Fun Project",
+			"Deployed",
+		],
+		github: "https://github.com/nishujangra/Love-Calculator",
+		website: "http://nishujangra27.pythonanywhere.com/",
+		description: [
+			"Web app that calculates compatibility between two names using ASCII value math.",
+			"Fun project developed for friends on Valentine's Day.",
+			"Simple, interactive, and fully deployed online for testing.",
+		],
+		selected: false,
+		progress: "completed",
+	},
+	{
+		name: "Spooky",
+		tech: [
+			"Rust",
+			"HTTP/3 + QUIC",
+			"Proxy",
+			"Health Check",
+			"Config-driven",
+		],
+		github: "https://github.com/nishujangra/spooky",
+		description: [
+			"Developing a load balancer in Rust with HTTP/3 support and TLS.",
+			"Implemented static hardcoded response for testing HTTP/3 server.",
+		],
+		selected: false,
+		progress: "ongoing",
+	},
 ];
-  
-  export default projects;
-  
