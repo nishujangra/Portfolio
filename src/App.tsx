@@ -6,8 +6,8 @@ import ComingSoon from "./pages/Misc/ComingSoon";
 import LoadingScreen from "./pages/Misc/LoadingScreen";
 import Home from "./pages/home/Home";
 import Blog from "./pages/Blogs/Blogs";
-import Project from "./pages/projects/Project";
-import Contact from "./pages/contact/Contact";
+import Project from "@/pages/projects/Project";
+import Contact from "@/pages/contact/Contact";
 
 const App = () => {
 	return (
