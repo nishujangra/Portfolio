@@ -2,112 +2,118 @@ import { Mail, MapPin, Github, Linkedin, Coffee } from "lucide-react";
 
 const Contact = () => {
   return (
-    <main className="w-full min-h-screen bg-space-950 text-text-primary font-mono relative overflow-hidden py-12 md:py-16">
+    <main className="w-full min-h-screen bg-bg-primary text-text-primary font-mono relative overflow-hidden py-12 md:py-16">
       <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8">
+
         {/* Header */}
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-neon-400 mb-2 md:mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-4">
             Get In Touch
           </h2>
-          <p className="text-gray-400 text-base md:text-lg">
+          <p className="text-text-muted text-base md:text-lg">
             Let's connect and build something amazing together!
           </p>
         </div>
 
-        {/* Contact & Social Grid */}
+        {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
           {/* Contact Info */}
-          <div className="bg-gray-900/50 p-4 md:p-6 rounded-lg shadow-lg border border-gray-800">
-            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-neon-400">
+          <div className="bg-bg-secondary p-5 rounded-xl border border-border-muted shadow-lg">
+            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-text-primary">
               Contact Information
             </h3>
-            <div className="space-y-3 md:space-y-4">
-              <div className="flex items-center gap-2 md:gap-3 text-gray-300">
-                <Mail color="#39FF14" size={18} />
+
+            <div className="space-y-4">
+
+              <div className="flex items-center gap-3">
+                <Mail size={20} className="text-text-accent" />
                 <div>
-                  <p className="font-medium text-text-primary text-sm md:text-base">Email</p>
+                  <p className="font-medium text-sm md:text-base">Email</p>
                   <a
                     href="mailto:ndjangra1027@gmail.com"
-                    className="text-neon-400 hover:text-neon-300 transition-colors text-sm md:text-base"
+                    className="text-text-accent hover:text-text-primary transition"
                   >
                     ndjangra1027@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 md:gap-3 text-gray-300">
-                <MapPin color="#39FF14" size={18} />
+              <div className="flex items-center gap-3">
+                <MapPin size={20} className="text-text-accent" />
                 <div>
-                  <p className="font-medium text-text-primary text-sm md:text-base">Location</p>
-                  <p className="text-sm md:text-base">Jhajjar, Haryana, India</p>
+                  <p className="font-medium text-sm md:text-base">Location</p>
+                  <p className="text-text-muted text-sm md:text-base">
+                    Jhajjar, Haryana, India
+                  </p>
                 </div>
               </div>
+
             </div>
           </div>
 
-          {/* Social Links & Support */}
-          <div className="bg-gray-900/50 p-4 md:p-6 rounded-lg shadow-lg border border-gray-800">
-            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-neon-400">
+          {/* Socials */}
+          <div className="bg-bg-secondary p-5 rounded-xl border border-border-muted shadow-lg">
+            <h3 className="text-lg md:text-xl font-bold mb-4 md:mb-6 text-text-primary">
               Connect & Support
             </h3>
-            <div className="space-y-3 md:space-y-4">
-              <div className="flex items-center gap-2 md:gap-3 text-gray-300">
-                <Github color="#39FF14" size={18} />
+
+            <div className="space-y-4">
+
+              <div className="flex items-center gap-3">
+                <Github size={20} className="text-text-accent" />
                 <div>
-                  <p className="font-medium text-text-primary text-sm md:text-base">GitHub</p>
+                  <p className="font-medium text-sm md:text-base">GitHub</p>
                   <a
                     href="https://github.com/nishujangra"
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-neon-400 hover:text-neon-300 transition-colors text-sm md:text-base"
+                    className="text-text-accent hover:text-text-primary transition"
                   >
                     github.com/nishujangra
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2 md:gap-3 text-gray-300">
-                <Linkedin color="#39FF14" size={18} />
+              <div className="flex items-center gap-3">
+                <Linkedin size={20} className="text-text-accent" />
                 <div>
-                  <p className="font-medium text-text-primary text-sm md:text-base">LinkedIn</p>
+                  <p className="font-medium text-sm md:text-base">LinkedIn</p>
                   <a
                     href="https://linkedin.com/in/nishujangra27"
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-neon-400 hover:text-neon-300 transition-colors text-sm md:text-base"
+                    className="text-text-accent hover:text-text-primary transition"
                   >
                     linkedin.com/in/nishujangra27
                   </a>
                 </div>
               </div>
 
-              <div className="pt-3 md:pt-4">
+              <div className="pt-3">
                 <a
                   href="https://buymeacoffee.com/nishujangra27"
                   target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-neon-400 hover:bg-neon-300 text-black font-semibold px-3 md:px-4 py-2 rounded-lg transition-colors duration-200 text-sm md:text-base"
+                  className="inline-flex items-center gap-2 bg-text-accent hover:bg-text-accent/80 text-black font-semibold px-4 py-2 rounded-lg transition"
                 >
                   <Coffee size={16} />
                   Buy Me a Coffee
                 </a>
               </div>
+
             </div>
           </div>
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-6 md:mt-8 bg-gray-900/30 p-4 md:p-6 rounded-lg border border-gray-800">
-          <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-4 text-neon-400">
+        {/* Bottom Section */}
+        <div className="mt-8 bg-bg-secondary p-5 rounded-xl border border-border-muted">
+          <h3 className="text-lg md:text-xl font-bold mb-4 text-text-primary">
             Let's Work Together
           </h3>
-          <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+          <p className="text-text-muted text-sm md:text-base leading-relaxed">
             I'm always open to discussing new opportunities, collaborations, or
-            just having a chat about technology. Whether you have a project in
-            mind, want to discuss backend architecture, or just want to connect,
-            feel free to reach out!
+            just talking tech. Feel free to reach out anytime!
           </p>
         </div>
+
       </div>
     </main>
   );

@@ -15,36 +15,34 @@ const BlogCard = ({ blog }: BlogCardProps) => {
       target="_blank"
       rel="noopener noreferrer"
       className="
-        group flex h-full flex-col gap-4 
+        group flex flex-col gap-4 h-full
         rounded-2xl border border-border-muted
-        bg-bg-card/80 p-5 
-        text-text-primary 
-        shadow-[0_0_20px_rgba(15,22,30,0.35)]
-        transition 
-        hover:border-cyber-500 
-        hover:bg-bg-hover/70 
-        hover:shadow-[0_0_25px_rgba(0,180,216,0.25)]
+        bg-bg-secondary/80 p-5
+        text-text-primary
+        shadow-[0_0_20px_rgba(10,10,15,0.3)]
+        transition
+        hover:bg-bg-hover/70
+        hover:border-border-primary
+        hover:shadow-[0_0_25px_rgba(157,78,221,0.35)]
       "
     >
-      <div className="flex items-start justify-between gap-4">
-        <h3 className="
-          text-lg font-semibold leading-tight 
-          text-electric-400 
-          transition group-hover:text-cyber-400
-        ">
+      {/* Top Row */}
+      <div className="flex items-start justify-between">
+        <h3 className="text-lg font-semibold leading-tight transition group-hover:text-text-accent">
           {blog.title}
         </h3>
 
         <ArrowUpRight
           className="
-            h-5 w-5 shrink-0 text-cyber-400 
-            opacity-0 transition group-hover:opacity-100
+            w-5 h-5 text-text-primary
+            opacity-0 group-hover:opacity-100 transition
           "
         />
       </div>
 
+      {/* Description */}
       <p
-        className="text-sm leading-relaxed text-text-secondary"
+        className="text-sm leading-relaxed text-text-muted"
         style={{
           display: "-webkit-box",
           WebkitLineClamp: 3,
@@ -55,15 +53,16 @@ const BlogCard = ({ blog }: BlogCardProps) => {
         {blog.description}
       </p>
 
+      {/* Tags */}
       <div className="mt-auto flex flex-wrap gap-2">
         {visibleTags.map((tag) => (
           <span
             key={tag}
             className="
               rounded-md border border-border-muted 
-              bg-space-800/40
+              bg-bg-primary/40
               px-3 py-1 text-[11px] uppercase tracking-wide 
-              text-cyber-400
+              text-text-primary
             "
           >
             {tag}
@@ -74,9 +73,9 @@ const BlogCard = ({ blog }: BlogCardProps) => {
           <span
             className="
               rounded-md border border-dashed border-border-muted 
-              bg-transparent px-3 py-1 
+              px-3 py-1 
               text-[11px] uppercase tracking-wide 
-              text-text-secondary
+              text-text-muted
             "
           >
             +{hiddenTagsCount} more

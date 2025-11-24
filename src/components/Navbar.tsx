@@ -1,12 +1,19 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const { pathname } = useLocation();
-
   const navigate = useNavigate();
+
+  const [open, setOpen] = useState(false);
 
   const links = [
     { name: "/home/nishant", to: "/" },
@@ -16,7 +23,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full sticky top-0 z-50 bg-space-950/97 backdrop-blur-lg border-b border-space-800 font-mono shadow-md">
+    <nav className="w-full sticky top-0 z-50 bg-bg-primary/95 backdrop-blur-lg border-b border-border-muted font-mono shadow-md">
       <div className="mx-auto px-6 py-5 flex justify-between items-center">
 
         {/* Terminal Prompt */}
@@ -25,12 +32,17 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           className="text-lg md:text-xl flex items-center gap-2 tracking-widest"
         >
-          <span className="text-terminal-blue cursor-pointer" onClick={() => navigate('/')}>nishant@portfolio:</span>
-          <span className="text-cyber-400">~</span>
-          <span className="text-terminal-orange animate-pulse">$</span>
+          <span
+            className="text-text-accent cursor-pointer"
+            onClick={() => navigate("/")}
+          >
+            nishant@portfolio:
+          </span>
+          <span className="text-text-secondary">~</span>
+          <span className="text-text-warning animate-pulse">$</span>
         </motion.div>
 
-        {/* Desktop Links */}
+        {/* Desktop Nav */}
         <ul className="hidden md:flex space-x-6 text-base md:text-lg">
           {links.map((l, i) => (
             <motion.li
@@ -41,10 +53,10 @@ const Navbar = () => {
             >
               <Link
                 to={l.to}
-                className={`px-3 py-1 rounded-md transition-all duration-200 ease-in-out ${
+                className={`px-3 py-1 rounded-md transition-all duration-200 ${
                   pathname === l.to
-                    ? "bg-space-800 text-neon-400 border border-neon-400/40"
-                    : "text-text-primary/80 hover:text-neon-400 hover:bg-space-800/50 hover:scale-105"
+                    ? "bg-bg-secondary text-highlight border border-highlight/40"
+                    : "text-text-primary/80 hover:text-highlight hover:bg-bg-secondary/50 hover:scale-105"
                 }`}
               >
                 {l.name}
@@ -55,20 +67,19 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger>
-              <Menu
-                className="text-neon-400 hover:text-neon-300 transition-colors duration-200"
-                size={26}
-              />
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild>
+              <button className="text-highlight hover:opacity-80 transition">
+                {open ? <X size={28} /> : <Menu size={28} />}
+              </button>
             </SheetTrigger>
 
-            <SheetContent className="bg-space-900 border-l border-space-800 text-text-primary font-mono p-6">
+            <SheetContent className="bg-bg-primary border-l border-border-muted text-text-primary font-mono p-6">
               <SheetHeader>
-                <div className="text-terminal-green text-lg flex items-center gap-2 mt-4">
-                  <span>nishant@portfolio:</span>
-                  <span className="text-cyber-400">~</span>
-                  <span className="text-terminal-orange animate-pulse">$</span>
+                <div className="text-lg flex items-center gap-2 mt-4">
+                  <span className="text-text-primary">nishant@portfolio:</span>
+                  <span className="text-text-secondary">~</span>
+                  <span className="text-text-warning animate-pulse">$</span>
                 </div>
               </SheetHeader>
 
@@ -77,10 +88,11 @@ const Navbar = () => {
                   <Link
                     key={l.to}
                     to={l.to}
-                    className={`px-3 py-2 rounded-md text-base transition-all duration-200 ${
+                    onClick={() => setOpen(false)}
+                    className={`px-3 py-2 rounded-md text-base transition ${
                       pathname === l.to
-                        ? "bg-space-800 text-neon-400 border border-neon-400/40"
-                        : "text-text-primary/80 hover:text-neon-400 hover:bg-space-800/50 hover:scale-[1.03]"
+                        ? "bg-bg-secondary text-highlight border border-highlight/40"
+                        : "text-text-primary/80 hover:text-highlight hover:bg-bg-secondary/50 hover:scale-[1.03]"
                     }`}
                   >
                     {l.name}

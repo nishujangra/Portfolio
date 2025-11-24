@@ -4,18 +4,19 @@ import TechnicalSkills from "./components/TechnicalSkills";
 
 const Home = () => {
   return (
-    <div className="w-full bg-space-950 text-text-primary font-mono relative overflow-hidden">
+    <div className="w-full bg-bg-primary text-text-primary font-mono relative overflow-hidden">
       {/* Main Content */}
       <div className="relative mx-auto px-8 md:px-16">
+        
         {/* HERO */}
         <Hero />
 
-        <div className="border-t border-neon-400/20"></div>
+        <div className="border-t border-highlight/20"></div>
 
         {/* SKILLS */}
         <TechnicalSkills />
 
-        <div className="border-t border-neon-400/20"></div>
+        <div className="border-t border-highlight/20"></div>
 
         {/* PROJECTS */}
         <SelectedProjects />
