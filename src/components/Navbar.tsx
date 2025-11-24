@@ -1,10 +1,12 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const { pathname } = useLocation();
+
+  const navigate = useNavigate();
 
   const links = [
     { name: "/home/nishant", to: "/" },
@@ -23,7 +25,7 @@ const Navbar = () => {
           animate={{ opacity: 1, x: 0 }}
           className="text-lg md:text-xl flex items-center gap-2 tracking-widest"
         >
-          <span className="text-terminal-blue">nishant@portfolio:</span>
+          <span className="text-terminal-blue cursor-pointer" onClick={() => navigate('/')}>nishant@portfolio:</span>
           <span className="text-cyber-400">~</span>
           <span className="text-terminal-orange animate-pulse">$</span>
         </motion.div>
