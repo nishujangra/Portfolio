@@ -64,6 +64,7 @@ export const projects: Project[] = [
 		name: "BalancerX",
 		tech: ["Go", "HTTP/TCP", "Proxy", "Health Check", "Config-driven"],
 		github: "https://github.com/nishujangra/balancerx",
+		website: "https://nishujangra.github.io/balancerx/",
 		description: [
 			"Production-grade load balancer with HTTP and TCP support, active health checks, and logging.",
 			"Implemented round-robin and random strategies, configurable via config.yaml.",
