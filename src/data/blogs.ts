@@ -103,6 +103,12 @@ const system_administration_linux: BlogCategory = {
 			url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Setup-Own-Mail-Server",
 			tags: ["Mail", "Postfix", "Dovecot", "Linux"],
 		},
+		{
+			title: "How to set up Alpine in VM",
+			description: "How to setupt Alpine Linux in your VM",
+			url: "https://medium.com/@nishujangra27/how-to-set-up-alpine-invm-979a8b589636",
+			tags: ["VirtualBox", "Alpine", "Alpine Linux", "Linux Setup"]
+		}
 	],
 };
 
