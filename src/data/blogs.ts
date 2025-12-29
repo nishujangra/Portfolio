@@ -122,6 +122,13 @@ const ebpf_kernel_programming: BlogCategory = {
 			url: "https://medium.com/@nishujangra27/getting-started-with-ebpf-and-xdp-a-simple-hello-world-in-ubuntu-c0e94e29221a",
 			tags: ["eBPF", "XDP", "Kernel", "Networking"],
 		},
+		{
+			title: "The Fun Bug Taught Me About Ring Buffers and Padding in eBPF",
+			description:
+				"A deep dive into a subtle eBPF bug caused by struct padding and ring buffer alignment, and how to fix it.",
+			url: "https://medium.com/@nishujangra27/the-fun-bug-taught-me-about-ring-buffers-and-padding-in-ebpf-7503032a86d7?postPublishedType=initial",
+			tags: ["eBPF", "Kernel", "Debugging", "CProgramming", "RingBuffer"],
+		},
 	],
 };
 
