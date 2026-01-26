@@ -170,6 +170,13 @@ const networking_infrastructure: BlogCategory = {
 			url: "https://bitbucket.org/tirveni/devuan/wiki/nishant/Virtual-Network-VirtualBox",
 			tags: ["VirtualBox", "Networking", "Labs"],
 		},
+		{
+			title: "The Silent Network Bug That Taught Me to Trust tcpdump Over DHCP",
+			description:
+				"Debugging a USB Ethernet (r8152) TX deadlock on Linux — why link-up and DHCP can lie, and how to fix it.",
+			url: "https://medium.com/@nishujangra27/the-silent-network-bug-that-taught-me-to-trust-tcpdump-over-dhcp-e95a1aaf101e",
+			tags: ["Linux", "Networking", "USB Ethernet", "r8152", "Debugging", "ARP"],
+		},
 	],
 };
 
