@@ -177,6 +177,12 @@ const networking_infrastructure: BlogCategory = {
 			url: "https://medium.com/@nishujangra27/the-silent-network-bug-that-taught-me-to-trust-tcpdump-over-dhcp-e95a1aaf101e",
 			tags: ["Linux", "Networking", "USB Ethernet", "r8152", "Debugging", "ARP"],
 		},
+		{
+			title: "Debugging Wireguard Lockout: How I Broke and Fixed My Own Internal Network",
+			description: "Setting up the Wireguard VPN between 2 Hetzner servers",
+			url: "https://medium.com/@nishujangra27/debugging-wireguard-lockout-how-i-broke-and-fixed-my-own-internal-network-f0b8bfc8f059",
+			tags: ["Wireguard", "VPN", "Linux", "Networking", "Split Tunnel"]
+		}
 	],
 };
 
