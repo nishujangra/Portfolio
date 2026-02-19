@@ -13,6 +13,25 @@ export interface Project {
 
 export const projects: Project[] = [
 	{
+		name: "Spooky",
+		tech: [
+			"Rust",
+			"HTTP/3 + QUIC",
+			"Reverse Proxy",
+			"Health Check",
+			"Config-Driven",
+		],
+		github: "https://github.com/nishujangra/spooky",
+		description: [
+			"Built an HTTP/3-to-HTTP/2 reverse proxy in Rust that terminates QUIC connections at the edge and forwards to upstream HTTP/2 backends — enabling HTTP/3 for clients without modifying existing infrastructure.",
+			"Implemented per-upstream load balancing with three strategies: round-robin, consistent hashing (FNV-1a), and random, each pool independently configured via YAML.",
+			"Added path-prefix and host-based routing with longest-prefix matching across multiple upstream backend pools.",
+			"Integrated passive health checks tracking backend liveness and excluding unhealthy nodes from the selection pool.",
+		],
+		selected: true,
+		progress: "ongoing",
+	},
+	{
 		name: "Firewall Management System",
 		tech: ["Perl", "Mojolicious", "CouchDB", "Shorewall", "Devuan/Linux"],
 		workplace: "Built at Udyansh (Team of 2)",
@@ -71,7 +90,7 @@ export const projects: Project[] = [
 			"Handles 11-12.5k req/sec with 4-16ms latency under 200 concurrent clients.",
 			"Stable under 500-2000 clients, processing ~647k-727k requests in 60s.",
 		],
-		selected: true,
+		selected: false,
 		progress: "completed",
 	},
 	{
@@ -106,22 +125,5 @@ export const projects: Project[] = [
 		],
 		selected: false,
 		progress: "completed",
-	},
-	{
-		name: "Spooky",
-		tech: [
-			"Rust",
-			"HTTP/3 + QUIC",
-			"Proxy",
-			"Health Check",
-			"Config-driven",
-		],
-		github: "https://github.com/nishujangra/spooky",
-		description: [
-			"Developing a load balancer in Rust with HTTP/3 support and TLS.",
-			"Implemented static hardcoded response for testing HTTP/3 server.",
-		],
-		selected: false,
-		progress: "ongoing",
 	},
 ];
