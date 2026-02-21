@@ -136,6 +136,12 @@ const networking_infrastructure: BlogCategory = {
 	title: "Networking & Infrastructure",
 	blogs: [
 		{
+			title: "Getting Started with Spooky: Bridging HTTP/2 and QUIC in Minutes",
+    		description: "Building Spooky — a QUIC edge proxy that accepts HTTP/3 traffic and forwards it to existing HTTP/2 backends with load balancing and health checks.",
+    		url: "https://medium.com/@nishujangra27/getting-started-with-spooky-bridging-http-2-and-quic-in-minutes-3e046acb5b09?postPublishedType=initial",
+    		tags: ["HTTP3", "QUIC", "LoadBalancing", "Rust", "Networking"]
+		},
+		{
 			title: "How to Set Up a Virtual Gateway with NAT in VirtualBox",
 			description:
 				"Configures a Devuan gateway VM that NATs traffic for an isolated VirtualBox lab network.",
