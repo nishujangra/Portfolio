@@ -22,6 +22,7 @@ export const projects: Project[] = [
 			"Config-Driven",
 		],
 		github: "https://github.com/nishujangra/spooky",
+		website: "https://nishujangra.github.io/spooky/",
 		description: [
 			"Built an HTTP/3-to-HTTP/2 reverse proxy in Rust that terminates QUIC connections at the edge and forwards to upstream HTTP/2 backends — enabling HTTP/3 for clients without modifying existing infrastructure.",
 			"Implemented per-upstream load balancing with three strategies: round-robin, consistent hashing (FNV-1a), and random, each pool independently configured via YAML.",
@@ -29,6 +30,19 @@ export const projects: Project[] = [
 			"Integrated passive health checks tracking backend liveness and excluding unhealthy nodes from the selection pool.",
 		],
 		selected: true,
+		progress: "ongoing",
+	},
+	{
+		name: "vex",
+		tech: ["Rust", "HTTP/3 + QUIC", "Load Testing", "Performance Benchmarking"],
+		github: "https://github.com/nishujangra/vex",
+		website: "https://nishujangra.github.io/vex/",
+		description: [
+			"Experimental HTTP/3 load testing tool built in Rust for benchmarking QUIC-based services.",
+			"Measures throughput, latency, and concurrent connection performance under controlled load.",
+			"Designed to test HTTP/3 servers and infrastructure with detailed performance metrics and reporting.",
+		],
+		selected: false,
 		progress: "ongoing",
 	},
 	{
