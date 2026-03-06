@@ -25,7 +25,7 @@ const Footer = () => {
 
             <a
               href="mailto:ndjangra1027@gmail.com"
-              className="block text-text-muted hover:text-highlight transition text-sm"
+              className="block text-text-muted hover:text-highlight transition text-sm focus:outline-2 focus:outline-offset-2 focus:outline-highlight rounded"
             >
               ndjangra1027@gmail.com
             </a>
@@ -34,7 +34,7 @@ const Footer = () => {
               href="https://buymeacoffee.com/nishujangra27"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-text-muted hover:text-highlight transition text-sm mt-2"
+              className="block text-text-muted hover:text-highlight transition text-sm mt-2 focus:outline-2 focus:outline-offset-2 focus:outline-highlight rounded"
             >
               Buy Me a Coffee
             </a>
@@ -57,7 +57,7 @@ const Footer = () => {
 
           <a
             href="mailto:ndjangra1027@gmail.com"
-            className="text-text-muted hover:text-highlight transition"
+            className="text-text-muted hover:text-highlight transition focus:outline-2 focus:outline-offset-2 focus:outline-highlight rounded"
             aria-label="Email"
           >
             <Mail size={22} />
@@ -94,7 +94,7 @@ const IconLink = ({
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="relative text-text-muted hover:text-highlight transition group"
+    className="relative text-text-muted hover:text-highlight transition group focus:outline-2 focus:outline-offset-2 focus:outline-highlight rounded"
     aria-label={label}
   >
     {children}
