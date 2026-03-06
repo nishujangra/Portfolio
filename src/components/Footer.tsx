@@ -67,7 +67,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-border-muted pt-6 text-center">
           <p className="text-text-muted text-sm">
-            © 2025 <span className="text-text-primary font-medium">Nishant</span>.
+            © {new Date().getFullYear()} <span className="text-text-primary font-medium">Nishant</span>.
             All rights reserved.
           </p>
 
