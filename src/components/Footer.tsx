@@ -55,9 +55,12 @@ const Footer = () => {
             <Twitter size={22} />
           </IconLink>
 
-          <IconLink href="mailto:ndjangra1027@gmail.com">
+          <a
+            href="mailto:ndjangra1027@gmail.com"
+            className="text-text-muted hover:text-highlight transition"
+          >
             <Mail size={22} />
-          </IconLink>
+          </a>
         </div>
 
         {/* Bottom */}
