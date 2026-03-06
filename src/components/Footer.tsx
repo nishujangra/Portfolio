@@ -3,7 +3,7 @@ import { Linkedin, Github, Twitter, Mail, ExternalLink } from "lucide-react";
 const Footer = () => {
   return (
     <footer className="bg-bg-primary text-text-primary pt-16 pb-10">
-      <div className="mx-auto px-10">
+      <div className="mx-auto px-10 max-w-7xl">
 
         {/* Top */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-14">
