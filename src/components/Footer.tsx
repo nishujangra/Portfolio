@@ -43,21 +43,22 @@ const Footer = () => {
 
         {/* Icons */}
         <div className="flex justify-center gap-8 mb-12">
-          <IconLink href="https://github.com/nishujangra">
+          <IconLink href="https://github.com/nishujangra" label="GitHub">
             <Github size={22} />
           </IconLink>
 
-          <IconLink href="https://www.linkedin.com/in/nishujangra27/">
+          <IconLink href="https://www.linkedin.com/in/nishujangra27/" label="LinkedIn">
             <Linkedin size={22} />
           </IconLink>
 
-          <IconLink href="https://x.com/nishujangra27">
+          <IconLink href="https://x.com/nishujangra27" label="Twitter">
             <Twitter size={22} />
           </IconLink>
 
           <a
             href="mailto:ndjangra1027@gmail.com"
             className="text-text-muted hover:text-highlight transition"
+            aria-label="Email"
           >
             <Mail size={22} />
           </a>
@@ -83,15 +84,18 @@ const Footer = () => {
 const IconLink = ({
   href,
   children,
+  label,
 }: {
   href: string;
   children: React.ReactNode;
+  label: string;
 }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
     className="text-text-muted hover:text-highlight transition"
+    aria-label={label}
   >
     {children}
   </a>
