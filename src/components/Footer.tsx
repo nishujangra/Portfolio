@@ -14,8 +14,7 @@ const Footer = () => {
               nishant@portfolio
             </h3>
             <p className="text-text-muted text-sm leading-relaxed max-w-sm">
-              Backend developer focused on Go, PostgreSQL, and Linux.
-              I build fast, reliable, production-ready systems.
+              Backend engineer building systems in Go & Rust. Linux, distributed systems, and open-source.
             </p>
           </div>
 

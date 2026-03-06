@@ -27,8 +27,8 @@ const Hero = () => {
           transition={{ delay: 0.2, duration: 0.7 }}
           className="text-lg md:text-xl text-text-muted max-w-xl leading-relaxed"
         >
-          I'm a backend developer passionate about building fast, reliable, and scalable systems
-          using Go, PostgreSQL, and Linux.<br />
+          Backend engineer building fast, reliable systems in Go & Rust on Linux.
+          I focus on distributed systems and open-source.<br />
           I've written <span className="text-highlight font-semibold">{allBlogs.length}</span> blogs so far.
         </motion.p>
 
