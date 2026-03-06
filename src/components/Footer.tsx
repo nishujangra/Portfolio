@@ -1,4 +1,4 @@
-import { Linkedin, Github, Twitter, Mail } from "lucide-react";
+import { Linkedin, Github, Twitter, Mail, ExternalLink } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -43,15 +43,15 @@ const Footer = () => {
 
         {/* Icons */}
         <div className="flex justify-center gap-8 mb-12">
-          <IconLink href="https://github.com/nishujangra" label="GitHub">
+          <IconLink href="https://github.com/nishujangra" label="GitHub (opens in new window)">
             <Github size={22} />
           </IconLink>
 
-          <IconLink href="https://www.linkedin.com/in/nishujangra27/" label="LinkedIn">
+          <IconLink href="https://www.linkedin.com/in/nishujangra27/" label="LinkedIn (opens in new window)">
             <Linkedin size={22} />
           </IconLink>
 
-          <IconLink href="https://x.com/nishujangra27" label="Twitter">
+          <IconLink href="https://x.com/nishujangra27" label="Twitter (opens in new window)">
             <Twitter size={22} />
           </IconLink>
 
@@ -94,10 +94,15 @@ const IconLink = ({
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="text-text-muted hover:text-highlight transition"
+    className="relative text-text-muted hover:text-highlight transition group"
     aria-label={label}
   >
     {children}
+    <ExternalLink
+      size={12}
+      className="absolute -top-1 -right-1 opacity-0 group-hover:opacity-100 transition-opacity"
+      aria-hidden="true"
+    />
   </a>
 );
 
