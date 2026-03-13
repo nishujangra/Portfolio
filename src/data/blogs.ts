@@ -129,6 +129,13 @@ const ebpf_kernel_programming: BlogCategory = {
 			url: "https://medium.com/@nishujangra27/the-fun-bug-taught-me-about-ring-buffers-and-padding-in-ebpf-7503032a86d7?postPublishedType=initial",
 			tags: ["eBPF", "Kernel", "Debugging", "CProgramming", "RingBuffer"],
 		},
+		{
+			title: "My eBPF Program Compiled with Clang… but the Kernel Verifier Rejected It",
+			description:
+				"Deep dive into kernel verifier rejection errors: understanding clang compilation flags, instruction restrictions, and debugging eBPF verification failures.",
+			url: "https://medium.com/@nishujangra27/my-ebpf-program-compiled-with-clang-but-the-kernel-verifier-rejected-it-a86eb048922e",
+			tags: ["eBPF", "XDP", "Linux", "Kernel"],
+		},
 	],
 };
 

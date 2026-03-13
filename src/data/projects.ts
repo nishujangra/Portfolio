@@ -42,7 +42,7 @@ export const projects: Project[] = [
 			"Measures throughput, latency, and concurrent connection performance under controlled load.",
 			"Designed to test HTTP/3 servers and infrastructure with detailed performance metrics and reporting.",
 		],
-		selected: false,
+		selected: true,
 		progress: "ongoing",
 	},
 	{
